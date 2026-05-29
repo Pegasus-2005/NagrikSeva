@@ -1,0 +1,6 @@
+{
+  "name": "NagrikSeva",
+  "description": "A citizen assistance, grievance drafting, and public information (RTI) portal integrated with West Bengal municipal customer charters.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
