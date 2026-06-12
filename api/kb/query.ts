@@ -1,4 +1,4 @@
-import { queryKnowledgeBase } from "../../src/data/knowledgeBase.ts";
+import { queryKnowledgeBase } from "../../src/data/knowledgeBase";
 
 export default async function handler(req: any, res: any) {
   // Allow OPTIONS pre-flight as well for any cross-domain requests

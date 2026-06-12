@@ -1,7 +1,9 @@
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
-import { queryKnowledgeBase } from "../src/data/knowledgeBase.ts";
-import { DEPARTMENTS_DIRECTORY } from "../src/data/departments.ts";
+import fs from "fs";
+import path from "path";
+import { queryKnowledgeBase } from "../src/data/knowledgeBase";
+import { DEPARTMENTS_DIRECTORY } from "../src/data/departments";
 
 dotenv.config();
 
@@ -16,7 +18,22 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    const apiKey = process.env.GEMINI_API_KEY;
+    let apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+      try {
+        const envExamplePath = path.resolve(process.cwd(), ".env.example");
+        if (fs.existsSync(envExamplePath)) {
+          const content = fs.readFileSync(envExamplePath, "utf-8");
+          const match = content.match(/GEMINI_API_KEY=["']?([^"'\s]+)["']?/);
+          if (match && match[1] && !match[1].startsWith("MY_GEMINI")) {
+            apiKey = match[1];
+          }
+        }
+      } catch (e) {
+        console.error("Failed to read fallback key from .env.example:", e);
+      }
+    }
+
     if (!apiKey) {
       return res.status(500).json({
         error: "GEMINI_API_KEY is not configured on this host. Please configure your environment variable in your Vercel deployment dashboard (Settings > Environment Variables) or verify your API keys.",

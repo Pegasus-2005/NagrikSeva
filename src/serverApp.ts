@@ -1,6 +1,8 @@
 import express from "express";
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
+import fs from "fs";
+import path from "path";
 import { queryKnowledgeBase } from "./data/knowledgeBase";
 import { DEPARTMENTS_DIRECTORY } from "./data/departments";
 
@@ -23,7 +25,22 @@ app.post("/api/kb/query", (req, res) => {
 // API Endpoint: Document & RTI compilation with Gemini RAG
 app.post("/api/generate-document", async (req, res) => {
   try {
-    const apiKey = process.env.GEMINI_API_KEY;
+    let apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+      try {
+        const envExamplePath = path.resolve(process.cwd(), ".env.example");
+        if (fs.existsSync(envExamplePath)) {
+          const content = fs.readFileSync(envExamplePath, "utf-8");
+          const match = content.match(/GEMINI_API_KEY=["']?([^"'\s]+)["']?/);
+          if (match && match[1] && !match[1].startsWith("MY_GEMINI")) {
+            apiKey = match[1];
+          }
+        }
+      } catch (e) {
+        console.error("Failed to read fallback key from .env.example:", e);
+      }
+    }
+
     if (!apiKey) {
       return res.status(500).json({
         error: "GEMINI_API_KEY is not configured. Please configure your environment variable in your Vercel deployment dashboard (Settings > Environment Variables).",
