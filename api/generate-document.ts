@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
-import { queryKnowledgeBase } from "../src/data/knowledgeBase";
-import { DEPARTMENTS_DIRECTORY } from "../src/data/departments";
+import { queryKnowledgeBase } from "../src/data/knowledgeBase.ts";
+import { DEPARTMENTS_DIRECTORY } from "../src/data/departments.ts";
 
 dotenv.config();
 
