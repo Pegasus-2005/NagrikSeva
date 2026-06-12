@@ -1,8 +1,6 @@
 {
   "version": 2,
   "rewrites": [
-    { "source": "/api/generate-document", "destination": "/api/generate-document.ts" },
-    { "source": "/api/kb/query", "destination": "/api/kb/query.ts" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]
 }
