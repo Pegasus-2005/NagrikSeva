@@ -3,8 +3,8 @@ import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
-import { queryKnowledgeBase } from "./data/knowledgeBase.js";
-import { DEPARTMENTS_DIRECTORY } from "./data/departments.js";
+import { queryKnowledgeBase } from "./data/knowledgeBase.ts";
+import { DEPARTMENTS_DIRECTORY } from "./data/departments.ts";
 
 dotenv.config();
 
