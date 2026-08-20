@@ -3,7 +3,7 @@ import { createServer as createViteServer } from "vite";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import app from "./src/serverApp.ts";
+import app from "./src/serverApp.js";
 
 // Handle CJS and ESM __dirname compatibility
 const currentDir = typeof __dirname !== 'undefined' 

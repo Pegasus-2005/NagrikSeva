@@ -1,3 +1,3 @@
 export const maxDuration = 60;
-import app from "../src/serverApp.ts";
+import app from "../src/serverApp.js";
 export default app;
