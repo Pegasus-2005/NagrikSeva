@@ -137,9 +137,9 @@ Drafting Requirements:
 (A clean, bilingual/Bengali/English bulletin outlining 3 action items: How to file, where to post or submit online/offline, helpline contacts, and municipal portal links)
 `;
 
-    // Call Gemini 3.7 Flash (Factual & Fast)
+    // Call Gemini 3.5 Flash (Factual & Fast)
     const content = await ai.models.generateContent({
-      model: "gemini-3.7-flash",
+      model: "gemini-3.5-flash",
       contents: prompt,
       config: {
         temperature: 0.2, // Low temperature for standard legal drafting consistency
