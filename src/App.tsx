@@ -1037,7 +1037,11 @@ export default function App() {
       fetch("/api/kb/query", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ description: problemDescription, category: selectedCategory }),
+        body: JSON.stringify({
+          description: problemDescription,
+          category: selectedCategory,
+          state: selectedState,
+        }),
       })
         .then((res) => res.json())
         .then((data) => {
@@ -1046,10 +1050,10 @@ export default function App() {
           }
         })
         .catch((err) => console.log("RAG preview err:", err));
-    }, 600);
+    }, 400);
 
     return () => clearTimeout(delayDebounceFn);
-  }, [problemDescription, selectedCategory]);
+  }, [problemDescription, selectedCategory, selectedState]);
 
   // Load preset demo cases
   const applyDemoScenario = (sc: number) => {

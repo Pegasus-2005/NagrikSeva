@@ -1,7 +1,7 @@
 import express from "express";
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
-import { queryKnowledgeBase } from "./data/knowledgeBase.js";
+import { queryKnowledgeBase, resolveCanonicalState } from "./data/knowledgeBase.js";
 import { DEPARTMENTS_DIRECTORY } from "./data/departments.js";
 
 dotenv.config();
@@ -74,8 +74,8 @@ function writeDatabase(data: typeof inMemoryDb) {
 // ---------------------------------------------------------------------------
 app.post("/api/kb/query", (req, res) => {
   try {
-    const { description, category } = req.body;
-    const results = queryKnowledgeBase(description || "", category || "other");
+    const { description, category, state } = req.body;
+    const results = queryKnowledgeBase(description || "", category || "other", state);
     res.json({ results });
   } catch (err: any) {
     res.status(500).json({ error: err.message });
@@ -179,18 +179,20 @@ app.post("/api/generate-document", async (req, res) => {
         .json({ error: "Missing state, category or description." });
     }
 
-    // 1. Local RAG lookup
-    const matchedChunks = queryKnowledgeBase(description, category);
+    const canonicalState = resolveCanonicalState(state);
+
+    // 1. Local RAG lookup (strictly filtered by selected state)
+    const matchedChunks = queryKnowledgeBase(description, category, canonicalState);
     const retrievedContext = matchedChunks
       .map(
         (chunk) =>
-          `[Ref Source ID: ${chunk.id} | Source Document: ${chunk.source} | Section: ${chunk.section} | Clause/Regulation: ${chunk.clause}]\nContent: "${chunk.content}"`
+          `[Ref Source ID: ${chunk.id} | State Jurisdiction: ${chunk.state} | Source Document: ${chunk.source} | Section: ${chunk.section} | Clause/Regulation: ${chunk.clause}]\nContent: "${chunk.content}"`
       )
       .join("\n\n");
 
     // 2. Department routing
     const stateObj =
-      DEPARTMENTS_DIRECTORY[state] || DEPARTMENTS_DIRECTORY["National/General"];
+      DEPARTMENTS_DIRECTORY[canonicalState] || DEPARTMENTS_DIRECTORY["National/General"];
     const deptInfo =
       stateObj && stateObj[category]
         ? stateObj[category]
@@ -235,11 +237,16 @@ app.post("/api/generate-document", async (req, res) => {
 YOUR CRITICAL RESPONSIBILITIES:
 1. UNDERSTAND THE CITIZEN'S ISSUE: The citizen may have typed in ANY language — English, Bengali, Hindi, Marathi, or even Romanized versions (e.g. "amar area te jol ashche na" = "water is not coming in my area"). You must UNDERSTAND the meaning regardless of script or language.
 2. TRANSLATE & FORMALIZE: Rewrite their raw issue description into a formal, professional English complaint paragraph. NEVER copy-paste their raw text as-is into the formal letter. The complaint letter must read as if written by a professional legal advocate.
-3. CITE SPECIFIC LAWS & CLAUSES: You are given statutory RAG context below. You MUST cite at least 2-3 specific clauses, sections, or act references from this context in the complaint body. Format citations like: "As per [Source], [Section] ([Clause]): [quoted text]".
-4. USE ACCURATE DETAILS: Use the exact duration the citizen reported. If they said "4 din" or "4 days", write "4 days" — do NOT substitute a different range.
+3. ABSOLUTE STATUTORY JURISDICTION RULE (CRITICAL):
+   - You are generating documents STRICTLY for the state/jurisdiction: "${canonicalState}".
+   - You MUST cite ONLY the clauses, acts, and municipal rules provided in the RAG context below for ${canonicalState} (or central acts like RTI Act 2005).
+   - STRICT NEGATIVE CONSTRAINT: If this petition is for Maharashtra, NEVER cite Kolkata Municipal Corporation (KMC), West Bengal Electricity Regulatory Commission (WBERC), West Bengal Municipal Service Rules, or any West Bengal laws.
+   - STRICT NEGATIVE CONSTRAINT: If this petition is for West Bengal, NEVER cite Brihanmumbai Municipal Corporation (BMC), Maharashtra Right to Public Services Act (RTS Maharashtra), MERC, or any Maharashtra laws.
+   - Any document violating this state separation is legally invalid.
+4. USE ACCURATE DETAILS: Use the exact duration the citizen reported. If they said "4 din" or "4 days" or "1-4 weeks", write the accurate period — do NOT substitute a different range.
 
 Citizen Input:
-- State: ${state}
+- State Jurisdiction: ${canonicalState}
 - City/District: ${city || "General municipal area"}
 - Category: ${category.replace(/_/g, " ")}
 - Citizen's Raw Issue (may be in any language/script): "${description}"
@@ -252,11 +259,11 @@ ${citizenSignatureDetails}
 Department to Address:
 - Officer: ${deptInfo ? deptInfo.designation : "The Executive Engineer"}
 - Department: ${deptInfo ? deptInfo.departmentName : "Public Grievances Department"}
-- Address: ${deptInfo ? deptInfo.address : "Municipal Office HQ, " + state}
+- Address: ${deptInfo ? deptInfo.address : "Municipal Office HQ, " + canonicalState}
 - Helpline: ${deptInfo ? deptInfo.helpline : "1800-XXX-XXXX"}
 - SLA Guarantee: ${deptInfo ? deptInfo.expectedResolutionDays + " working days" : "As per Citizen Charter"}
 
-STATUTORY & LEGAL CONTEXT FROM RAG (cite these in the complaint):
+STATUTORY & LEGAL CONTEXT FROM RAG (cite these in the complaint strictly for ${canonicalState}):
 ---------
 ${retrievedContext || "No specific statutory context found. Use general RTI Act 2005 and Citizen Charter provisions."}
 ---------
@@ -271,7 +278,7 @@ A formal grievance letter dated ${todayDate}, addressed to the department office
 - Formal subject line
 - A clear, professionally rewritten paragraph explaining the citizen's issue (translated from their raw input)
 - Duration and impact on residents
-- At least 2-3 statutory citations from the RAG context above
+- At least 2-3 statutory citations from the RAG context above (strictly for ${canonicalState})
 - A prayer/relief section
 - Citizen's signature block
 
@@ -305,9 +312,15 @@ Simple step-by-step filing instructions for the citizen in their selected langua
     // (runs when no API key or Gemini call failed)
     // ---------------------------------------------------------------------------
     if (!responseText) {
-      // Collect ALL matched RAG citations (not just one)
-      const ragCitations = matchedChunks.length > 0
-        ? matchedChunks.slice(0, 4).map((chunk, i) =>
+      // Collect ALL matched RAG citations strictly for the canonical state
+      const filteredChunks = matchedChunks.filter((c) => {
+        if (canonicalState === "West Bengal") return c.state === "West Bengal" || c.state === "National";
+        if (canonicalState === "Maharashtra") return c.state === "Maharashtra" || c.state === "National";
+        return c.state === "National";
+      });
+
+      const ragCitations = filteredChunks.length > 0
+        ? filteredChunks.slice(0, 3).map((chunk, i) =>
             `${i + 1}. As per ${chunk.source}, ${chunk.section} (${chunk.clause}):\n   "${chunk.content}"`
           ).join("\n\n")
         : `1. As per the Citizen Charter and Right to Public Services Standards, Public Service Standard (Clause 3.1):\n   "Time-bound redressal of civic grievance within statutory timeframe."`;
@@ -320,7 +333,7 @@ Simple step-by-step filing instructions for the citizen in their selected langua
         : "Public Relations & Grievances Department";
       const deptAddress = deptInfo
         ? deptInfo.address
-        : `${city || "Municipal Office"}, ${state}`;
+        : `${city || "Municipal Office"}, ${canonicalState}`;
       const slaDays = deptInfo ? deptInfo.expectedResolutionDays : 3;
       const helpline = deptInfo?.helpline || "1800-XXX-XXXX";
 
