@@ -6,13 +6,19 @@
 export interface DepartmentInfo {
   departmentName: string;
   departmentName_bn: string;
+  departmentName_hi: string;
+  departmentName_mr: string;
   portalUrl: string;
   helpline: string;
   expectedResolutionDays: number;
   designation: string;
   designation_bn: string;
+  designation_hi: string;
+  designation_mr: string;
   address: string;
   address_bn: string;
+  address_hi: string;
+  address_mr: string;
 }
 
 export const DEPARTMENTS_DIRECTORY: Record<string, Record<string, DepartmentInfo>> = {
@@ -20,158 +26,365 @@ export const DEPARTMENTS_DIRECTORY: Record<string, Record<string, DepartmentInfo
     "water_supply": {
       "departmentName": "Kolkata Municipal Corporation - Water Supply Department",
       "departmentName_bn": "কলকাতা পৌরনিগম - জল সরবরাহ বিভাগ",
+      "departmentName_hi": "कोलकाता नगर निगम - जल आपूर्ति विभाग",
+      "departmentName_mr": "कोलकाता महानगरपालिका - पाणी पुरवठा विभाग",
       "portalUrl": "https://www.kmcgov.in/",
       "helpline": "1800-102-4444",
       "expectedResolutionDays": 3,
       "designation": "The Executive Engineer, Water Supply Department",
-      "designation_bn": "সহকারী প্রকৌশলী, জল সরবরাহ বিভাগ",
+      "designation_bn": "নির্বাহী প্রকৌশলী, জল সরবরাহ বিভাগ",
+      "designation_hi": "कार्यकारी अभियंता, जल आपूर्ति विभाग",
+      "designation_mr": "कार्यकारी अभियंता, पाणी पुरवठा विभाग",
       "address": "5, S.N. Banerjee Road, Kolkata, West Bengal - 700013",
-      "address_bn": "৫, এস.এন. ব্যানার্জী রোড, কলকাতা, পশ্চিমবঙ্গ - ৭০০০১৩"
+      "address_bn": "৫, এস.এন. ব্যানার্জী রোড, কলকাতা, পশ্চিমবঙ্গ - ৭০০০১৩",
+      "address_hi": "5, एस.एन. बनर्जी रोड, कोलकाता, पश्चिम बंगाल - 700013",
+      "address_mr": "५, एस.एन. बॅनर्जी रोड, कोलकाता, पश्चिम बंगाल - ७०००१३"
     },
     "electricity": {
       "departmentName": "West Bengal State Electricity Distribution Company Limited (WBSEDCL)",
       "departmentName_bn": "পশ্চিমবঙ্গ রাজ্য বিদ্যুৎ বন্টন সংস্থা লিমিটেড (WBSEDCL)",
+      "departmentName_hi": "पश्चिम बंगाल राज्य विद्युत वितरण कंपनी लिमिटेड (WBSEDCL)",
+      "departmentName_mr": "पश्चिम बंगाल राज्य वीज वितरण कंपनी मर्यादित (WBSEDCL)",
       "portalUrl": "https://www.wbsedcl.in/",
       "helpline": "19121",
       "expectedResolutionDays": 2,
       "designation": "The Assistant Engineer & Station Manager",
       "designation_bn": "সহকারী প্রকৌশলী এবং স্টেশন ম্যানেজার",
+      "designation_hi": "सहायक अभियंता एवं स्टेशन प्रबंधक",
+      "designation_mr": "सहायक अभियंता आणि स्टेशन व्यवस्थापक",
       "address": "Bidyut Bhavan, Block DJ, Sector II, Bidhannagar, Kolkata - 700091",
-      "address_bn": "বিদ্যুৎ ভবন, ব্লক DJ, সেক্টর II, বিধাননগর, কলকাতা - ৭০০০৯১"
+      "address_bn": "বিদ্যুৎ ভবন, ব্লক DJ, সেক্টর II, বিধাননগর, কলকাতা - ৭০০০৯১",
+      "address_hi": "विद्युत भवन, ब्लॉक डीजे, सेक्टर II, बिधाननगर, कोलकाता - 700091",
+      "address_mr": "विद्युत भवन, ब्लॉक डीजे, सेक्टर II, बिधाननगर, कोलकाता - ७०००९१"
     },
     "roads": {
       "departmentName": "Public Works Department (PWD), Government of West Bengal",
       "departmentName_bn": "গণপূর্ত বিভাগ (PWD), পশ্চিমবঙ্গ সরকার",
+      "departmentName_hi": "लोक निर्माण विभाग (PWD), पश्चिम बंगाल सरकार",
+      "departmentName_mr": "सार्वजनिक बांधकाम विभाग (PWD), पश्चिम बंगाल शासन",
       "portalUrl": "https://www.pwdwb.in/",
       "helpline": "1800-345-5555",
       "expectedResolutionDays": 15,
       "designation": "The Executive Engineer, PWD Division",
       "designation_bn": "নির্বাহী প্রকৌশলী, পিডাব্লুডি বিভাগ",
+      "designation_hi": "कार्यकारी अभियंता, पीडब्ल्यूडी प्रभाग",
+      "designation_mr": "कार्यकारी अभियंता, पीडब्ल्यूडी विभाग",
       "address": "Nabanita Building, Writers' Buildings, Kolkata - 700001",
-      "address_bn": "নবানী ভবন, মহাকরণ (রাইটার্স বিল্ডিংস), কলকাতা - ৭০০০০১"
+      "address_bn": "নবানী ভবন, মহাকরণ (রাইটার্স বিল্ডিংস), কলকাতা - ৭০০০০১",
+      "address_hi": "नबनिता बिल्डिंग, राइटर्स बिल्डिंग्स, कोलकाता - 700001",
+      "address_mr": "नबनिता इमारत, रायटर्स बिल्डिंग्ज, कोलकाता - ७००००१"
     },
     "garbage": {
       "departmentName": "Kolkata Municipal Corporation - Solid Waste Management Department",
       "departmentName_bn": "কলকাতা পৌরনিগম - কঠিন বর্জ্য ব্যবস্থাপনা বিভাগ",
+      "departmentName_hi": "कोलकाता नगर निगम - ठोस अपशिष्ट प्रबंधन विभाग",
+      "departmentName_mr": "कोलकाता महानगरपालिका - घनकचरा व्यवस्थापन विभाग",
       "portalUrl": "https://www.kmcgov.in/",
       "helpline": "1800-103-4444",
       "expectedResolutionDays": 1,
       "designation": "The Chief Engineer, Solid Waste Management",
       "designation_bn": "প্রধান প্রকৌশলী, কঠিন বর্জ্য ব্যবস্থাপনা",
+      "designation_hi": "मुख्य अभियंता, ठोस अपशिष्ट प्रबंधन",
+      "designation_mr": "मुख्य अभियंता, घनकचरा व्यवस्थापन",
       "address": "48, Market Street, Kolkata, West Bengal - 700087",
-      "address_bn": "৪৮, মার্কেট স্ট্রিট, কলকাতা, পশ্চিমবঙ্গ - ৭০০০৮৭"
+      "address_bn": "৪৮, মার্কেট স্ট্রিট, কলকাতা, পশ্চিমবঙ্গ - ৭০০০৮৭",
+      "address_hi": "48, मार्केट स्ट्रीट, कोलकाता, पश्चिम बंगाल - 700087",
+      "address_mr": "४८, मार्केट स्ट्रीट, कोलकाता, पश्चिम बंगाल - ७०००८७"
     },
     "drainage": {
       "departmentName": "Kolkata Municipal Corporation - Sewerage and Drainage Department",
       "departmentName_bn": "কলকাতা পৌরনিগম - নিকাশি ও নর্দমা প্রণালী বিভাগ",
+      "departmentName_hi": "कोलकाता नगर निगम - सीवरेज और जल निकासी विभाग",
+      "departmentName_mr": "कोलकाता महानगरपालिका - मलनिस्सारण व पर्जन्य जलवाहिन्या विभाग",
       "portalUrl": "https://www.kmcgov.in/",
       "helpline": "033-2286-1000",
       "expectedResolutionDays": 5,
       "designation": "The Executive Engineer, Drainage Division",
       "designation_bn": "নির্বাহী প্রকৌশলী, নিকাশি বিভাগ",
+      "designation_hi": "कार्यकारी अभियंता, जल निकासी प्रभाग",
+      "designation_mr": "कार्यकारी अभियंता, सांडपाणी विभाग",
       "address": "5, S.N. Banerjee Road, Kolkata, West Bengal - 700013",
-      "address_bn": "৫, এস.এন. ব্যানার্জী রোড, কলকাতা, পশ্চিমবঙ্গ - ৭০০০১৩"
+      "address_bn": "৫, এস.এন. ব্যানার্জী রোড, কলকাতা, পশ্চিমবঙ্গ - ৭০০০১৩",
+      "address_hi": "5, एस.एन. बनर्जी रोड, कोलकाता, पश्चिम बंगाल - 700013",
+      "address_mr": "५, एस.एन. बॅनर्जी रोड, कोलकाता, पश्चिम बंगाल - ७०००१३"
     },
     "certificates": {
       "departmentName": "Department of Health & Family Welfare (Birth/Death Registrar)",
       "departmentName_bn": "স্বাস্থ্য ও পরিবার কল্যাণ দপ্তর (জন্ম-মৃত্যু নিবন্ধক কার্যালয়)",
+      "departmentName_hi": "स्वास्थ्य एवं परिवार कल्याण विभाग (जन्म एवं मृत्यु रजिस्ट्रार)",
+      "departmentName_mr": "आरोग्य आणि कुटुंब कल्याण विभाग (जन्म-मृत्यू निबंधक)",
       "portalUrl": "https://www.wbhealth.gov.in/",
       "helpline": "1800-3134-44222",
       "expectedResolutionDays": 7,
       "designation": "The Sub-Registrar of Births & Deaths",
       "designation_bn": "জন্ম ও মৃত্যু সাব-রেজিস্ট্রার",
+      "designation_hi": "उप-पंजीयक, जन्म एवं मृत्यु",
+      "designation_mr": "उप-निबंधक, जन्म आणि मृत्यू",
       "address": "Swasthya Bhawan, GN-29, Sector-V, Salt Lake, Kolkata - 700091",
-      "address_bn": "স্বাস্থ্য ভবন, GN-২৯, সেক্টর-V, সল্টলেক, কলকাতা - ৭০০০৯১"
+      "address_bn": "স্বাস্থ্য ভবন, GN-২৯, সেক্টর-V, সল্টলেক, কলকাতা - ৭০০০৯১",
+      "address_hi": "स्वास्थ्य भवन, जीएन-29, सेक्टर-V, साल्ट लेक, कोलकाता - 700091",
+      "address_mr": "आरोग्य भवन, जीएन-२९, सेक्टर-V, सॉल्ट लेक, कोलकाता - ७०००९१"
     },
     "pension": {
       "departmentName": "Department of Panchayats & Rural Development / Municipal Affairs",
       "departmentName_bn": "পঞ্চায়েত ও গ্রামীণ উন্নয়ন দপ্তর / পৌর বিষয়ক বিভাগ",
+      "departmentName_hi": "पंचायत एवं ग्रामीण विकास विभाग / नगर पालिका मामले",
+      "departmentName_mr": "ग्रामविकास व पंचायत विभाग / नागरी प्रशासन",
       "portalUrl": "https://www.wbprd.gov.in/",
       "helpline": "033-2248-1168",
       "expectedResolutionDays": 30,
       "designation": "The Block Development Officer (BDO) / Municipal Commissioner",
       "designation_bn": "ব্লক ডেভেলপমেন্ট অফিসার (BDO) / পৌর কমিশনার",
+      "designation_hi": "प्रखंड विकास पदाधिकारी (BDO) / नगर निगम आयुक्त",
+      "designation_mr": "गट विकास अधिकारी (BDO) / पालिका आयुक्त",
       "address": "Joint Administrative Building, HC-7, Sector-III, Salt Lake, Kolkata - 700106",
-      "address_bn": "যৌথ প্রশাসনিক ভবন, HC-৭, সেক্টর-III, সল্টলেক, কলকাতা - ৭০০১০৬"
-    },
+      "address_bn": "যৌথ প্রশাসনিক ভবন, HC-৭, সেক্টর-III, সল্টলেক, কলকাতা - ৭০০১০৬",
+      "address_hi": "संयुक्त प्रशासनिक भवन, एचसी-7, सेक्टर-III, साल्ट लेक, कोलकाता - 700106",
+      "address_mr": "संयुक्त प्रशासकीय इमारत, एचसी-७, सेक्टर-III, सॉल्ट लेक, कोलकाता - ७००१०६"
+    }
   },
+
+  "Maharashtra": {
+    "water_supply": {
+      "departmentName": "Brihanmumbai Municipal Corporation (BMC) / Municipal Corporation - Hydraulic Engineer Dept",
+      "departmentName_bn": "বৃহন্মুম্বাই পৌরনিগম (BMC) - হাইড্রোলিক ইঞ্জিনিয়ারিং জল সরবরাহ বিভাগ",
+      "departmentName_hi": "बृहन्मुंबई नगर निगम (BMC) - जल आपूर्ति एवं हाइड्रोलिक विभाग",
+      "departmentName_mr": "बृहन्मुंबई महानगरपालिका (BMC) - जल अभियंता खाते (पाणी पुरवठा)",
+      "portalUrl": "https://portal.mcgm.gov.in/",
+      "helpline": "1916",
+      "expectedResolutionDays": 3,
+      "designation": "The Hydraulic Engineer, Water Supply Department",
+      "designation_bn": "হাইড্রোলিক ইঞ্জিনিয়ার, জল সরবরাহ দপ্তর",
+      "designation_hi": "जल अभियंता (Hydraulic Engineer), जल आपूर्ति विभाग",
+      "designation_mr": "प्रमुख जल अभियंता, पाणी पुरवठा विभाग",
+      "address": "BMC Head Office, Mahapalika Marg, Fort, Mumbai, Maharashtra - 400001",
+      "address_bn": "বিএমসি হেড অফিস, মহাবীর মার্গ, ফোর্ট, মুম্বাই, মহারাষ্ট্র - ৪০০০০১",
+      "address_hi": "बीएमसी मुख्यालय, महापालिका मार्ग, फोर्ट, मुंबई, महाराष्ट्र - 400001",
+      "address_mr": "महानगरपालिका मुख्यालय, महापालिका मार्ग, फोर्ट, मुंबई, महाराष्ट्र - ४००००१"
+    },
+    "electricity": {
+      "departmentName": "Maharashtra State Electricity Distribution Co. Ltd. (MSEDCL / Mahavitaran)",
+      "departmentName_bn": "মহারাষ্ট্র রাজ্য বিদ্যুৎ বন্টন সংস্থা লিমিটেড (মহাবিতরণ / MSEDCL)",
+      "departmentName_hi": "महाराष्ट्र राज्य विद्युत वितरण कंपनी मर्यादित (महावितरण / MSEDCL)",
+      "departmentName_mr": "महाराष्ट्र राज्य विद्युत वितरण कंपनी मर्यादित (महावितरण / MSEDCL)",
+      "portalUrl": "https://www.mahadiscom.in/",
+      "helpline": "1800-233-3435",
+      "expectedResolutionDays": 2,
+      "designation": "The Executive Engineer, MSEDCL Division Office",
+      "designation_bn": "নির্বাহী প্রকৌশলী, মহাবিতরণ দপ্তর",
+      "designation_hi": "कार्यकारी अभियंता, महावितरण प्रभाग कार्यालय",
+      "designation_mr": "कार्यकारी अभियंता, महावितरण विभाग कार्यालय",
+      "address": "Prakashgad, Plot No. G-9, Anant Kanekar Marg, Bandra (E), Mumbai - 400051",
+      "address_bn": "প্রকাশগড়, বান্দ্রা (পূর্ব), মুম্বাই, মহারাষ্ট্র - ৪০০০৫১",
+      "address_hi": "प्रकाशगड, अनंत काणेकर मार्ग, बांद्रा (पूर्व), मुंबई - 400051",
+      "address_mr": "प्रकाशगड, अनंत काणेकर मार्ग, बांद्रा (पूर्व), मुंबई - ४०००५१"
+    },
+    "roads": {
+      "departmentName": "Public Works Department (PWD) / Municipal Corporation Road & Traffic Wing",
+      "departmentName_bn": "গণপূর্ত বিভাগ (PWD) / পৌর পথ ও ট্রাফিক শাখা, মহারাষ্ট্র",
+      "departmentName_hi": "लोक निर्माण विभाग (पीडब्ल्यूडी) / महानगरपालिका सड़क विभाग",
+      "departmentName_mr": "सार्वजनिक बांधकाम विभाग (PWD) / रस्ते व वाहतूक खाते",
+      "portalUrl": "https://pwd.maharashtra.gov.in/",
+      "helpline": "1800-120-8040",
+      "expectedResolutionDays": 14,
+      "designation": "The Chief Engineer (Roads & Traffic)",
+      "designation_bn": "প্রধান প্রকৌশলী (রাস্তাঘাট ও ট্রাফিক)",
+      "designation_hi": "मुख्य अभियंता (सड़क एवं यातायात विभाग)",
+      "designation_mr": "मुख्य अभियंता (रस्ते आणि वाहतूक खाते)",
+      "address": "PWD Mantralaya, Madam Cama Road, Nariman Point, Mumbai - 400032",
+      "address_bn": "পিডাব্লুডি মন্ত্রালয়, মাদাম কামা রোড, মুম্বাই - ৪০০০৩২",
+      "address_hi": "पीडब्ल्यूडी मंत्रालय, मादाम कामा रोड, नरीमन पॉइंट, मुंबई - 400032",
+      "address_mr": "सार्वजनिक बांधकाम मंत्रालय, मादाम कामा मार्ग, नरिमन पॉइंट, मुंबई - ४०००३२"
+    },
+    "garbage": {
+      "departmentName": "Municipal Corporation Solid Waste Management (SWM) Department",
+      "departmentName_bn": "পৌরনিগম কঠিন বর্জ্য ব্যবস্থাপনা (SWM) বিভাগ",
+      "departmentName_hi": "महानगरपालिका ठोस अपशिष्ट प्रबंधन (SWM) विभाग",
+      "departmentName_mr": "महानगरपालिका घनकचरा व्यवस्थापन खाते (SWM)",
+      "portalUrl": "https://swachhbharatmission.gov.in/",
+      "helpline": "1916",
+      "expectedResolutionDays": 1,
+      "designation": "The Chief Engineer (Solid Waste Management)",
+      "designation_bn": "প্রধান প্রকৌশলী (কঠিন বর্জ্য ব্যবস্থাপনা)",
+      "designation_hi": "मुख्य अभियंता (ठोस अपशिष्ट प्रबंधन)",
+      "designation_mr": "मुख्य अभियंता (घनकचरा व्यवस्थापन विभाग)",
+      "address": "Khatav Market Building, 4th Floor, Grant Road (W), Mumbai - 400007",
+      "address_bn": "গ্রান্ট রোড (পশ্চিম), মুম্বাই - ৪০০০৭",
+      "address_hi": "खताव मार्केट बिल्डिंग, ग्रांट रोड (पश्चिम), मुंबई - 400007",
+      "address_mr": "खटाव मार्केट इमारत, ग्रँट रोड (पश्चिम), मुंबई - ४००००७"
+    },
+    "drainage": {
+      "departmentName": "Storm Water Drains & Sewerage Operations Department",
+      "departmentName_bn": "বৃষ্টির জল নিকাশি ও ড্রেনেজ অপারেশন বিভাগ",
+      "departmentName_hi": "तूफानी जल निकासी एवं सीवरेज संचालन विभाग",
+      "departmentName_mr": "पर्जन्य जलवाहिन्या व मलनिस्सारण प्रचालन विभाग",
+      "portalUrl": "https://portal.mcgm.gov.in/",
+      "helpline": "1916",
+      "expectedResolutionDays": 3,
+      "designation": "The Chief Engineer (Storm Water Drains / Sewerage)",
+      "designation_bn": "প্রধান প্রকৌশলী (জল নিকাশি ও নর্দমা)",
+      "designation_hi": "मुख्य अभियंता (वर्षा जल एवं सीवरेज)",
+      "designation_mr": "मुख्य अभियंता (पर्जन्य जलवाहिन्या व मलनिस्सारण)",
+      "address": "Engineering Hub Building, Dr. E. Moses Road, Worli, Mumbai - 400018",
+      "address_bn": "ইঞ্জিনিয়ারিং হাব বিল্ডিং, ওরলি, মুম্বাই - ৪০০০১৮",
+      "address_hi": "इंजीनियरिंग हब बिल्डिंग, वर्ली, मुंबई - 400018",
+      "address_mr": "अभियांत्रिकी केंद्र इमारत, वरळी, मुंबई - ४०००१८"
+    },
+    "certificates": {
+      "departmentName": "Public Health Department (Registrar of Births & Deaths, Maharashtra)",
+      "departmentName_bn": "জনস্বাস্থ্য দপ্তর (জন্ম ও মৃত্যু নিবন্ধক কার্যালয়, মহারাষ্ট্র)",
+      "departmentName_hi": "सार्वजनिक स्वास्थ्य विभाग (जन्म एवं मृत्यु पंजीकरण कार्यालय)",
+      "departmentName_mr": "सार्वजनिक आरोग्य खाते (जन्म-मृत्यू नोंदणी विभाग, महाराष्ट्र)",
+      "portalUrl": "https://aaplesarkar.mahaonline.gov.in/",
+      "helpline": "1800-120-8040",
+      "expectedResolutionDays": 7,
+      "designation": "The Medical Officer of Health / Registrar",
+      "designation_bn": "স্বাস্থ্য চিকিৎসা কর্মকর্তা / নিবন্ধক",
+      "designation_hi": "स्वास्थ्य चिकित्सा अधिकारी / रजिस्ट्रार",
+      "designation_mr": "वैद्यकीय आरोग्य अधिकारी / निबंधक (जन्म-मृत्यू)",
+      "address": "Aaple Sarkar Seva Kendra / Ward Health Office, Maharashtra",
+      "address_bn": "আপলে সরকার সেবা কেন্দ্র / ওয়ার্ড স্বাস্থ্য দপ্তর, মহারাষ্ট্র",
+      "address_hi": "आपले सरकार सेवा केंद्र / वार्ड स्वास्थ्य कार्यालय, महाराष्ट्र",
+      "address_mr": "आपले सरकार सेवा केंद्र / प्रभाग आरोग्य कार्यालय, महाराष्ट्र"
+    },
+    "pension": {
+      "departmentName": "Department of Social Justice & Special Assistance (Sanjay Gandhi Niradhar Yojana)",
+      "departmentName_bn": "সমাজ ন্যায়বিচার দপ্তর (সঞ্জয় গান্ধী নিরাধার যোজনা / বার্ধক্য ভাতা)",
+      "departmentName_hi": "सामाजिक न्याय एवं विशेष सहायता विभाग (संजय गांधी निराधार योजना)",
+      "departmentName_mr": "सामाजिक न्याय व विशेष सहाय्य विभाग (संजय गांधी निराधार योजना / श्रावणबाळ योजना)",
+      "portalUrl": "https://sjsa.maharashtra.gov.in/",
+      "helpline": "1800-222-262",
+      "expectedResolutionDays": 30,
+      "designation": "The Tehsildar / District Social Welfare Officer",
+      "designation_bn": "তহসিলদার / জেলা সমাজকল্যাণ কর্মকর্তা",
+      "designation_hi": "तहसीलदार / जिला समाज कल्याण अधिकारी",
+      "designation_mr": "तहसीलदार / जिल्हा समाज कल्याण अधिकारी",
+      "address": "Tehsil Office / District Collectorate, Social Welfare Wing, Maharashtra",
+      "address_bn": "তহসিল অফিস / জেলা কালেক্টরেট, মহারাষ্ট্র",
+      "address_hi": "तहसील कार्यालय / जिला कलेक्ट्रेट, समाज कल्याण शाखा, महाराष्ट्र",
+      "address_mr": "तहसील कार्यालय / जिल्हाधिकारी कार्यालय, सामाजिक न्याय शाखा, महाराष्ट्र"
+    }
+  },
+
   "National/General": {
     "water_supply": {
       "departmentName": "Public Health Engineering Department (PHED) / Municipal Board",
       "departmentName_bn": "জনস্বাস্থ্য কারিগরি বিভাগ (PHED) / পৌর বোর্ড",
+      "departmentName_hi": "लोक स्वास्थ्य यांत्रिकी विभाग (PHED) / नगर पालिका परिषद",
+      "departmentName_mr": "सार्वजनिक आरोग्य अभियांत्रिकी विभाग (PHED) / नगरपालिका मंडळ",
       "portalUrl": "https://jaljeevanmission.gov.in/",
       "helpline": "1800-180-3535",
       "expectedResolutionDays": 5,
       "designation": "The Executive Engineer, PHED",
       "designation_bn": "নির্বাহী প্রকৌশলী, পিএইচইডি (PHED)",
+      "designation_hi": "कार्यकारी अभियंता, पीएचईडी (PHED)",
+      "designation_mr": "कार्यकारी अभियंता, पीएचईडी (PHED)",
       "address": "Main Municipal Corporation Office, Central Division",
-      "address_bn": "প্রধান পৌর কর্পোরেশন কার্যালয়, কেন্দ্রীয় বিভাগ"
+      "address_bn": "প্রধান পৌর কর্পোরেশন কার্যালয়, কেন্দ্রীয় বিভাগ",
+      "address_hi": "मुख्य नगर निगम कार्यालय, केंद्रीय प्रभाग",
+      "address_mr": "मुख्य महानगरपालिका कार्यालय, मध्यवर्ती विभाग"
     },
     "electricity": {
       "departmentName": "State Power Distribution Corporation Limited",
       "departmentName_bn": "রাজ্য বিদ্যুৎ বন্টন কর্পোরেশন লিমিটেড",
+      "departmentName_hi": "राज्य विद्युत वितरण निगम लिमिटेड",
+      "departmentName_mr": "राज्य वीज वितरण महामंडळ मर्यादित",
       "portalUrl": "https://www.powergrid.in/",
       "helpline": "1912",
       "expectedResolutionDays": 3,
       "designation": "The Assistant Engineer, Electrical Sub-division",
       "designation_bn": "সহকারী প্রকৌশলী, বিদ্যুৎ সাব-ডিভিশন",
+      "designation_hi": "सहायक अभियंता, विद्युत उप-प्रभाग",
+      "designation_mr": "सहायक अभियंता, वीज उपविभाग",
       "address": "Main Power Grid Complex, Electricity Head Office",
-      "address_bn": "প্রধান পাওয়ার গ্রিড কমপ্লেক্স, কেন্দ্রীয় বিদ্যুৎ কার্যালয়"
+      "address_bn": "প্রধান পাওয়ার গ্রিড কমপ্লেক্স, কেন্দ্রীয় বিদ্যুৎ কার্যালয়",
+      "address_hi": "मुख्य पावर ग्रिड कॉम्प्लेक्स, केंद्रीय विद्युत कार्यालय",
+      "address_mr": "मुख्य पॉवर ग्रीड संकुल, विद्युत मुख्य कार्यालय"
     },
     "roads": {
       "departmentName": "National Highways Authority of India (NHAI) / Municipal PWD",
-      "departmentName_bn": "भारतीय জাতীয় সড়ক কর্তৃপক্ষ (NHAI) / পৌর পিডাব্লুডি (PWD)",
+      "departmentName_bn": "ভারতীয় জাতীয় সড়ক কর্তৃপক্ষ (NHAI) / পৌর গণপূর্ত বিভাগ",
+      "departmentName_hi": "भारतीय राष्ट्रीय राजमार्ग प्राधिकरण (NHAI) / नगर पालिका लोक निर्माण विभाग",
+      "departmentName_mr": "भारतीय राष्ट्रीय महामार्ग प्राधिकरण (NHAI) / सार्वजनिक बांधकाम विभाग",
       "portalUrl": "https://nhai.gov.in/",
       "helpline": "1033",
       "expectedResolutionDays": 10,
       "designation": "The Executive Engineer, Public Works Department",
       "designation_bn": "নির্বাহী প্রকৌশলী, জনসেবা পূর্ত বিভাগ",
+      "designation_hi": "कार्यकारी अभियंता, लोक निर्माण विभाग",
+      "designation_mr": "कार्यकारी अभियंता, सार्वजनिक बांधकाम विभाग",
       "address": "PWD Division Office, District HQ",
-      "address_bn": "পিডাব্লুডি রোড ডিভিশন অফিস, জেলা সদর"
+      "address_bn": "পিডাব্লুডি রোড ডিভিশন অফিস, জেলা সদর",
+      "address_hi": "पीडब्ल्यूडी प्रभाग कार्यालय, जिला मुख्यालय",
+      "address_mr": "पीडब्ल्यूडी विभाग कार्यालय, जिल्हा मुख्यालय"
     },
     "garbage": {
       "departmentName": "Municipal Corporation - Health & Sanitation Wing",
       "departmentName_bn": "পৌর কর্পোরেশন - স্বাস্থ্য ও স্যানিটেশন শাখা",
+      "departmentName_hi": "नगर निगम - स्वास्थ्य एवं स्वच्छता विभाग",
+      "departmentName_mr": "महानगरपालिका - आरोग्य व स्वच्छता विभाग",
       "portalUrl": "https://swachhbharatmission.gov.in/",
       "helpline": "1969",
       "expectedResolutionDays": 2,
       "designation": "The Sanitary Inspector, Municipal Corporation",
       "designation_bn": "স্যানিটারি ইন্সপেক্টর, পৌর কর্পোরেশন",
+      "designation_hi": "स्वच्छता निरीक्षक (Sanitary Inspector), नगर निगम",
+      "designation_mr": "स्वच्छता निरीक्षक, महानगरपालिका",
       "address": "Local Municipal Ward Office",
-      "address_bn": "স্থানীয় পৌর ওয়ার্ড অফিস"
+      "address_bn": "স্থানীয় পৌর ওয়ার্ড অফিস",
+      "address_hi": "स्थानीय नगर पालिका वार्ड कार्यालय",
+      "address_mr": "स्थानिक प्रभाग कार्यालय"
     },
     "drainage": {
       "departmentName": "Municipal Corporation - Sewerage Division",
       "departmentName_bn": "পৌর কর্পোরেশন - নিকাশি বিভাগ",
+      "departmentName_hi": "नगर निगम - सीवरेज एवं जल निकासी विभाग",
+      "departmentName_mr": "महानगरपालिका - सांडपाणी व मलनिस्सारण विभाग",
       "portalUrl": "https://www.amrut.gov.in/",
       "helpline": "1800-345-1200",
       "expectedResolutionDays": 4,
       "designation": "The Assistant Engineer, Sewerage & Drainage Wing",
-      "designation_bn": "সহকারী প্রকৌশলী, নিকাশি ও নগ্ন নিকাশ শাখা",
+      "designation_bn": "সহকারী প্রকৌশলী, নিকাশি ও নর্দমা শাখা",
+      "designation_hi": "सहायक अभियंता, सीवरेज एवं जल निकासी शाखा",
+      "designation_mr": "सहायक अभियंता, सांडपाणी व पर्जन्य जलवाहिन्या विभाग",
       "address": "Municipal Corporation Central Works Office",
-      "address_bn": "পৌর কর্পোরেশন কেন্দ্রীয় ওয়ার্কস অফিস"
+      "address_bn": "পৌর কর্পোরেশন কেন্দ্রীয় ওয়ার্কস অফিস",
+      "address_hi": "नगर निगम केंद्रीय निर्माण कार्यालय",
+      "address_mr": "महानगरपालिका मध्यवर्ती बांधकाम कार्यालय"
     },
     "certificates": {
       "departmentName": "Registrar of Births and Deaths, Municipal Office",
       "departmentName_bn": "জন্ম ও মৃত্যু নিবন্ধক, পৌর কার্যালয়",
+      "departmentName_hi": "जन्म एवं मृत्यु निबंधक, नगर पालिका कार्यालय",
+      "departmentName_mr": "जन्म आणि मृत्यू निबंधक, नगरपालिका कार्यालय",
       "portalUrl": "https://crsorgi.gov.in/",
       "helpline": "1800-11-0033",
       "expectedResolutionDays": 10,
       "designation": "The Registrar (Birth and Death Registration)",
       "designation_bn": "নিবন্ধক (জন্ম ও মৃত্যু নিবন্ধন)",
+      "designation_hi": "निबंधक (जन्म एवं मृत्यु पंजीकरण)",
+      "designation_mr": "निबंधक (जन्म व मृत्यू नोंदणी)",
       "address": "Local Civil Registry Office, Municipal Building",
-      "address_bn": "স্থানীয় সিভিল রেজিস্ট্রি অফিস, পৌর ভবন"
+      "address_bn": "স্থানীয় সিভিল রেজিস্ট্রি অফিস, পৌর ভবন",
+      "address_hi": "स्थानीय नागरिक पंजीकरण कार्यालय, नगर पालिका भवन",
+      "address_mr": "स्थानिक नागरी नोंदणी कार्यालय, पालिका भवन"
     },
     "pension": {
       "departmentName": "Department of Social Welfare & Pension Board",
       "departmentName_bn": "সমাজকল্যাণ অধিদপ্তর ও পেনশন বোর্ড",
+      "departmentName_hi": "समाज कल्याण विभाग एवं राष्ट्रीय पेंशन बोर्ड",
+      "departmentName_mr": "समाजकल्याण विभाग व पेन्शन मंडळ",
       "portalUrl": "https://nsap.nic.in/",
       "helpline": "1800-11-1555",
       "expectedResolutionDays": 45,
       "designation": "The District Social Welfare Officer",
       "designation_bn": "জেলা সমাজকল্যাণ কর্মকর্তা",
+      "designation_hi": "जिला समाज कल्याण अधिकारी",
+      "designation_mr": "जिल्हा समाज कल्याण अधिकारी",
       "address": "District Collectorate, Social Welfare Wing",
-      "address_bn": "জেলা কালেক্টরেট, সমাজকল্যাণ শাখা"
+      "address_bn": "জেলা কালেক্টরেট, সমাজকল্যাণ শাখা",
+      "address_hi": "जिला कलेक्ट्रेट, समाज कल्याण शाखा",
+      "address_mr": "जिल्हाधिकारी कार्यालय, समाजकल्याण विभाग"
     }
   }
 };

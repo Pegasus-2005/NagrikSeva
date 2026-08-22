@@ -11,7 +11,7 @@ const currentDir = typeof __dirname !== 'undefined'
   : path.dirname(fileURLToPath(import.meta.url));
 
 async function startServer() {
-  const isProd = process.env.NODE_ENV === "production" || fs.existsSync(path.resolve(currentDir, "dist"));
+  const isProd = process.env.NODE_ENV === "production";
 
   if (!isProd) {
     const vite = await createViteServer({

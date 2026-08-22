@@ -1,43 +1,187 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Bengali:wght@100..900&family=Noto+Sans+Devanagari:wght@100..900&family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Space Grotesk", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-sans: "Noto Sans", "Noto Sans Bengali", "Noto Sans Devanagari", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", "Noto Sans", sans-serif;
+
+  /* Warm NagrikSeva Earthy Palette */
+  --color-saffron: #B8441A;
+  --color-saffron-dark: #8B3015;
+  --color-saffron-light: #F4D5C4;
+  --color-saffron-50: #FFF2E8;
+  --color-cream: #FAF6F0;
+  --color-cream-dark: #F3ECE2;
+  --color-warm-charcoal: #1A1A26;
+  --color-warm-grey: #5A5A6E;
+  --color-warm-border: #E5DAD0;
+  --color-warm-bg: #F5EFE7;
+  --color-sage: #237A4B;
+  --color-sage-light: #E7F5ED;
+  --color-sage-dark: #165633;
+  --color-tricolor-saffron: #FF9933;
+  --color-tricolor-white: #FFFFFF;
+  --color-tricolor-green: #138808;
 }
 
-/* Print Utilities to produce standalone legal letter sheets */
-@media print {
-  /* Hide standard headers, footers, sidebars, background styling and buttons during system printing */
-  html, body {
-    background-color: white !important;
-    background: white !important;
-    color: black !important;
-    font-family: serif !important; /* Standard serif for classical legal appearance */
-  }
+/* Global Smooth Defaults */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+body {
+  background-color: var(--color-cream);
+  color: var(--color-warm-charcoal);
+  font-family: var(--font-sans);
+}
+
+/* Focus rings */
+*:focus-visible {
+  outline: 2px solid var(--color-saffron);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Micro-animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes gentlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@keyframes micPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(184, 68, 26, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(184, 68, 26, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(184, 68, 26, 0);
+  }
+}
+
+@keyframes soundWave {
+  0%, 100% { height: 6px; }
+  50% { height: 22px; }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Utility animation classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out both;
+}
+
+.animate-slide-in {
+  animation: slideInRight 0.35s ease-out both;
+}
+
+.animate-gentle-pulse {
+  animation: gentlePulse 2.5s ease-in-out infinite;
+}
+
+.animate-mic-listening {
+  animation: micPulse 1.4s infinite;
+}
+
+.wave-bar {
+  display: inline-block;
+  width: 3px;
+  background-color: var(--color-saffron);
+  border-radius: 3px;
+  animation: soundWave 1.2s ease-in-out infinite;
+}
+.wave-bar:nth-child(2) { animation-delay: 0.2s; }
+.wave-bar:nth-child(3) { animation-delay: 0.4s; }
+.wave-bar:nth-child(4) { animation-delay: 0.1s; }
+.wave-bar:nth-child(5) { animation-delay: 0.3s; }
+
+/* Custom warm card component */
+.card-warm {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-warm-border);
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 6px 16px rgba(184, 68, 26, 0.03);
+}
+
+/* Paper document preview */
+.paper-preview {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-warm-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 12px 28px rgba(0, 0, 0, 0.04);
+  border-radius: 1.25rem;
+  font-family: inherit;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-warm-border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-saffron-light);
+}
+
+/* Print styling */
+@media print {
   body * {
     visibility: hidden;
   }
-
-  /* Target the printable legal document panel exclusively */
   #printable_legal_document_container,
   #printable_legal_document_container * {
-    visibility: visible !important;
+    visibility: visible;
   }
-
   #printable_legal_document_container {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    background: white !important;
+    margin: 0;
+    padding: 24px;
+    font-size: 13pt;
+    line-height: 1.6;
     color: black !important;
-    font-size: 11pt !important;
-    line-height: 1.6 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    white-space: pre-wrap !important;
+    background: white !important;
   }
 }
