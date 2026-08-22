@@ -92,13 +92,13 @@ const UI_TRANSLATIONS = {
     tabRights: "Know Your Rights",
     tabHelplines: "Helplines & Directory",
     tabMyComplaints: "My Saved Drafts",
-    
+
     // Intake Stepper
     stepLocation: "1. Region & Authority",
     stepCategory: "2. Civic Department",
     stepDetails: "3. Grievance Context",
     stepReview: "4. Compiled Document",
-    
+
     detectLocation: "Detect My Location",
     detectingLocation: "Locating your municipality...",
     locationDetected: "Location Detected",
@@ -114,11 +114,11 @@ const UI_TRANSLATIONS = {
     docBoth: "Both Documents (Official Complaint & RTI Application)",
     docComplaint: "Complaint Letter (Directed to the Executive Officer)",
     docRti: "RTI Application (Under RTI Section 6)",
-    
+
     // Help and tips
     knowYourRightsHelp: "Process Framework & Legality",
     knowYourRightsText: "This application references official municipal charters, maps the designated officer's address, and correlates key regulatory codes to draft compliant office paperwork.",
-    
+
     // Action buttons
     btnNext: "Continue",
     btnBack: "Return",
@@ -126,13 +126,13 @@ const UI_TRANSLATIONS = {
     btnGenerating: "Aligning municipal charters... Drafting formal paperwork...",
     btnReset: "Review & Revise",
     btnStartOver: "Start Over",
-    
+
     // Voice mic
     micStart: "Click to speak your problem",
     micListening: "Listening... Speak your problem clearly",
     micStop: "Stop Voice Recording",
     micNotSupported: "Voice recognition is not supported in this browser.",
-    
+
     // User Profile
     profileTitle: "Citizen Profile & Auto-Fill",
     profileSubtitle: "Save your details once. We will automatically fill your name, address, and date in every complaint letter and RTI petition.",
@@ -147,7 +147,7 @@ const UI_TRANSLATIONS = {
     bplCardNo: "BPL Card Number",
     saveProfileBtn: "Save Profile",
     profileSavedNotice: "Profile saved! Letters will be automatically filled with your details.",
-    
+
     // Output screen
     outputHeading: "Official Papers Drafted Successfully",
     outputSub: "Verify the drafted materials below. Copy, print or download compiled texts for formal submission.",
@@ -163,7 +163,7 @@ const UI_TRANSLATIONS = {
     expectedRes: "Statutory Citizen SLA Timeframe:",
     helplinePhone: "Official Departmental Direct Hotline:",
     portalLink: "Nodal Civic Web Portal:",
-    
+
     // Canned scenarios
     demoScenariosTitle: "Predefined Case Studies",
     demoScenariosSub: "Select a real-world case study to instantly pre-fill the form with standard regional civic grievance facts.",
@@ -173,10 +173,10 @@ const UI_TRANSLATIONS = {
     demo2Desc: "Elderly social security allowance not disbursed for 2 cycles.",
     demo3Title: "Case Study C: Ward Development Audit",
     demo3Desc: "Filing a public RTI enquiry on fund utilization for ward road repairs.",
-    
+
     // Rights section
     rightsHeader: "Familiarize With Your Statutory Rights (RTI Section 6 & Citizen Charters)",
-    
+
     sandboxLabel: "NAGRIK SEVA ASSISTANCE PROTOCOL",
     orOtherStateModel: "National / Other State Model",
     stateSelectSubtext: "* Mapped with official West Bengal (KMC, Siliguri) & Maharashtra (BMC, PMC, MSEDCL) municipal charters.",
@@ -232,13 +232,13 @@ const UI_TRANSLATIONS = {
     tabRights: "নাগরিক অধিকার নির্দেশিকা",
     tabHelplines: "পৌর ডিরেক্টরি ও হেল্পলাইন",
     tabMyComplaints: "আমার সংরক্ষিত খসড়া",
-    
+
     // Intake Stepper
     stepLocation: "১. অঞ্চল ও সংশ্লিষ্ট পৌর বিভাগ",
     stepCategory: "২. নাগরিক পরিষেবার ক্যাটাগরি",
     stepDetails: "৩. অভাব-অভিযোগের বিবরণ",
     stepReview: "৪. প্রস্তুতকৃত খসড়া পত্র",
-    
+
     detectLocation: "আমার অবস্থান শনাক্ত করুন (GPS)",
     detectingLocation: "পৌর এলাকা খোঁজা হচ্ছে...",
     locationDetected: "অবস্থান শনাক্ত হয়েছে",
@@ -254,11 +254,11 @@ const UI_TRANSLATIONS = {
     docBoth: "অভিযোগপত্র এবং আরটিআই আবেদনপত্র দুই-ই প্রস্তুত করুন",
     docComplaint: "পৌর দপ্তরে জমা দেওয়ার সাধারণ অভিযোগপত্র",
     docRti: "তথ্য জানার অধিকার আইনের ধারা ৬ অনুযায়ী আরটিআই আবেদনপত্র",
-    
+
     // Help and tips
     knowYourRightsHelp: "আইনসম্মত কার্যপ্রণালী ও সময়ের বাধ্যবাধকতা",
     knowYourRightsText: "এই ব্যবস্থাটি সরাসরি সরকারি সিটিজেন চার্টার এবং তথ্য জানার অধিকার আইনের নিয়মাবলী মিলিয়ে একটি আইনসম্মত খসড়া আবেদনপত্র প্রস্তুত করবে।",
-    
+
     // Action buttons
     btnNext: "পরবর্তী ধাপে যান",
     btnBack: "পূর্ববর্তী ধাপে যান",
@@ -266,13 +266,13 @@ const UI_TRANSLATIONS = {
     btnGenerating: "বিভাগীয় নিয়মাবলী বিশ্লেষণ করা হচ্ছে... নথি খসড়া হচ্ছে...",
     btnReset: "নতুন করে শুরু করুন",
     btnStartOver: "নতুন করে শুরু",
-    
+
     // Voice mic
     micStart: "মুখে সমস্যা বলতে মাইকে ক্লিক করুন",
     micListening: "শুনছি... আপনার সমস্যার কথা স্পষ্ট করে বলুন",
     micStop: "রেকর্ডিং বন্ধ করুন",
     micNotSupported: "এই ব্রাউজারে ভয়েস সাপোর্ট নেই।",
-    
+
     // User Profile
     profileTitle: "নাগরিক তথ্য ও অটো-ফিল প্রোফাইল",
     profileSubtitle: "একবার আপনার নাম ও ঠিকানা সেভ করুন। প্রতিটি অভিযোগপত্র ও আরটিআই আবেদনে আপনার বিবরণী স্বয়ংক্রিয়ভাবে বসে যাবে।",
@@ -287,7 +287,7 @@ const UI_TRANSLATIONS = {
     bplCardNo: "বিপিএল কার্ড নম্বর",
     saveProfileBtn: "প্রোফাইল সেভ করুন",
     profileSavedNotice: "প্রোফাইল সেভ হয়েছে! চিঠিতে আপনার নাম-ঠিকানা স্বয়ংক্রিয়ভাবে যুক্ত হবে।",
-    
+
     // Output screen
     outputHeading: "খসড়া আইনি নথি সফলভাবে প্রস্তুত করা হয়েছে",
     outputSub: "নিচের নথিগুলো ভালোভাবে পড়ে নিন। আপনি এগুলো কপি অথবা ডাউনলোড করে সংশ্লিষ্ট দপ্তরে জমা দিতে পারেন।",
@@ -303,7 +303,7 @@ const UI_TRANSLATIONS = {
     expectedRes: "সমাধানের সময়সীমা (সিটিজেন চার্টার):",
     helplinePhone: "সরাসরি বিভাগীয় হেল্পলাইন নাম্বার:",
     portalLink: "অফিসিয়াল পোর্টাল লিংক:",
-    
+
     // Canned scenarios
     demoScenariosTitle: "পূর্বনির্ধারিত উদাহরণসমূহ",
     demoScenariosSub: "ফর্মটি পরীক্ষা করার জন্য নিচের যেকোনো একটি উদাহরণে ক্লিক করলে তা বিভাগীয় তথ্যসহ স্বয়ংক্রিয়ভাবে পূরণ হয়ে যাবে।",
@@ -313,10 +313,10 @@ const UI_TRANSLATIONS = {
     demo2Desc: "গত ২ মাসের পুরনো সামাজিক ভাতা আটকে থাকার জন্য আবেদন।",
     demo3Title: "উদাহরণ ৩: রাস্তা মেরামতের RTI",
     demo3Desc: "ওয়ার্ডে বরাদ্দকৃত রাস্তার উন্নয়ন তহবিলের হিসাব জানার জন্য RTI আবেদন।",
-    
+
     // Rights section
     rightsHeader: "আপনার আইনি ক্ষমতাগুলি জেনে নিন (RTI ধারা ৬ ও সিটিজেন চার্টার)",
-    
+
     sandboxLabel: "নাগরিক সেবা পোর্টাল সহকারী",
     orOtherStateModel: "জাতীয় / অন্যান্য রাজ্যের মডেল",
     stateSelectSubtext: "* এটি পশ্চিমবঙ্গ ও মহারাষ্ট্রের অফিসিয়াল পৌর সিটিজেন চার্টার ও সেবা অধিকার আইনের সাথে সংযুক্ত।",
@@ -372,13 +372,13 @@ const UI_TRANSLATIONS = {
     tabRights: "अपने अधिकार जानें",
     tabHelplines: "हेल्पलाइन एवं निर्देशिका",
     tabMyComplaints: "मेरे सहेजे गए पत्र",
-    
+
     // Intake Stepper
     stepLocation: "1. क्षेत्र एवं नगर पालिका",
     stepCategory: "2. नागरिक सेवा विभाग",
     stepDetails: "3. समस्या का विवरण",
     stepReview: "4. तैयार आवेदन पत्र",
-    
+
     detectLocation: "मेरी लोकेशन पता करें (GPS)",
     detectingLocation: "नगर पालिका का पता लगाया जा रहा है...",
     locationDetected: "लोकेशन सफलतापूर्वक पहचानी गई",
@@ -394,11 +394,11 @@ const UI_TRANSLATIONS = {
     docBoth: "दोनों दस्तावेज (शिकायत पत्र और आरटीआई आवेदन)",
     docComplaint: "शिकायत पत्र (संबंधित अधिकारी को प्रेषित)",
     docRti: "आरटीआई आवेदन (सूचना का अधिकार धारा 6)",
-    
+
     // Help and tips
     knowYourRightsHelp: "कानूनी ढांचा एवं समय सीमा",
     knowYourRightsText: "यह पोर्टल आधिकारिक नागरिक घोषणा पत्र और आरटीआई नियमों के आधार पर आपका आवेदन तैयार करता है।",
-    
+
     // Action buttons
     btnNext: "आगे बढ़ें",
     btnBack: "पीछे जाएं",
@@ -406,13 +406,13 @@ const UI_TRANSLATIONS = {
     btnGenerating: "सरकारी नियमों का मिलान हो रहा है... पत्र तैयार किया जा रहा है...",
     btnReset: "शुरुआत से लिखें",
     btnStartOver: "नया आवेदन",
-    
+
     // Voice mic
     micStart: "बोलकर समस्या दर्ज करने के लिए माइक दबाएं",
     micListening: "सुन रहे हैं... कृपया स्पष्ट आवाज में अपनी समस्या बताएं",
     micStop: "माइक बंद करें",
     micNotSupported: "इस ब्राउज़र में वॉइस टाइपिंग उपलब्ध नहीं है।",
-    
+
     // User Profile
     profileTitle: "नागरिक प्रोफाइल एवं स्वतः पूर्ति (Auto-Fill)",
     profileSubtitle: "अपना विवरण एक बार सहेजें। हर शिकायत व आरटीआई आवेदन में आपका नाम, पता और दिनांक स्वतः जुड़ जाएगा।",
@@ -427,7 +427,7 @@ const UI_TRANSLATIONS = {
     bplCardNo: "बीपीएल कार्ड नंबर",
     saveProfileBtn: "प्रोफाइल सहेजें",
     profileSavedNotice: "प्रोफाइल सहेजा गया! आपके पत्रों में विवरण स्वतः भर जाएगा।",
-    
+
     // Output screen
     outputHeading: "दस्तावेज सफलतापूर्वक तैयार हो गया है",
     outputSub: "नीचे दिए गए आवेदन पत्र की जांच करें। इसे कॉपी, प्रिंट या डाउनलोड करके संबंधित कार्यालय में जमा करें।",
@@ -443,7 +443,7 @@ const UI_TRANSLATIONS = {
     expectedRes: "निवारण समय सीमा (SLA):",
     helplinePhone: "विभागीय डायरेक्ट हेल्पलाइन:",
     portalLink: "आधिकारिक वेब पोर्टल:",
-    
+
     // Canned scenarios
     demoScenariosTitle: "सामान्य उदाहरण",
     demoScenariosSub: "फॉर्म को तुरंत भरने के लिए नीचे दिए गए किसी भी उदाहरण पर क्लिक करें।",
@@ -453,10 +453,10 @@ const UI_TRANSLATIONS = {
     demo2Desc: "पिछले 2 महीनों से वृद्धावस्था पेंशन बैंक खाते में न आने पर आरटीआई।",
     demo3Title: "उदाहरण 3: सड़क मरम्मत आरटीआई",
     demo3Desc: "वार्ड की सड़क मरम्मत के लिए आवंटित बजट और टेंडर की जानकारी हेतु।",
-    
+
     // Rights section
     rightsHeader: "अपने कानूनी अधिकार जानें (RTI धारा 6 व सिटीजन चार्टर)",
-    
+
     sandboxLabel: "नागरिक सेवा सहायता पोर्टल",
     orOtherStateModel: "राष्ट्रीय / अन्य राज्य मॉडल",
     stateSelectSubtext: "* पश्चिम बंगाल एवं महाराष्ट्र के आधिकारिक नागरिक चार्टर से सीधे जुड़ा हुआ।",
@@ -512,13 +512,13 @@ const UI_TRANSLATIONS = {
     tabRights: "आपले हक्क जाणून घ्या",
     tabHelplines: "हेल्पलाइन व निर्देशिका",
     tabMyComplaints: "माझे जतन केलेले अर्ज",
-    
+
     // Intake Stepper
     stepLocation: "१. प्रदेश व महानगरपालिका",
     stepCategory: "२. नागरी सेवा विभाग",
     stepDetails: "३. तक्रारीचा तपशील",
     stepReview: "४. तयार झालेला अर्ज",
-    
+
     detectLocation: "माझे स्थान शोधा (GPS)",
     detectingLocation: "स्थान शोधत आहे...",
     locationDetected: "स्थान निश्चित झाले",
@@ -534,11 +534,11 @@ const UI_TRANSLATIONS = {
     docBoth: "दोन्ही अर्ज (तक्रार पत्र आणि RTI अर्ज)",
     docComplaint: "तक्रार पत्र (संबंधित अधिकाऱ्यास सादर करण्यासाठी)",
     docRti: "माहिती अधिकार अर्ज (RTI कलम ६ अन्वये)",
-    
+
     // Help and tips
     knowYourRightsHelp: "कायदेशीर चौकट व मुदत",
     knowYourRightsText: "हे पोर्टल अधिकृत नागरिक सनद आणि लोकसेवा हमी कायद्याच्या आधारे परिपूर्ण अर्ज तयार करते.",
-    
+
     // Action buttons
     btnNext: "पुढे जा",
     btnBack: "मागे या",
@@ -546,13 +546,13 @@ const UI_TRANSLATIONS = {
     btnGenerating: "सरकारी नियमांची पडताळणी सुरू आहे... अर्ज तयार होत आहे...",
     btnReset: "पुन्हा सुरू करा",
     btnStartOver: "नवीन अर्ज",
-    
+
     // Voice mic
     micStart: "बोलून तक्रार नोंदवण्यासाठी माइक दाबा",
     micListening: "ऐकत आहे... आपली समस्या स्पष्ट आवाजात सांगा",
     micStop: "माइक बंद करा",
     micNotSupported: "या ब्राउझरमध्ये व्हॉइस टायपिंग उपलब्ध नाही.",
-    
+
     // User Profile
     profileTitle: "नागरिक प्रोफाइल व ऑटो-फिल",
     profileSubtitle: "आपला तपशील एकदा जतन करा. प्रत्येक तक्रार व RTI अर्जात आपले नाव, पत्ता आणि तारीख आपोआप भरली जाईल.",
@@ -567,7 +567,7 @@ const UI_TRANSLATIONS = {
     bplCardNo: "BPL कार्ड क्रमांक",
     saveProfileBtn: "प्रोफाइल सेव्ह करा",
     profileSavedNotice: "प्रोफाइल जतन केले! आपल्या अर्जात तपशील आपोआप भरला जाईल.",
-    
+
     // Output screen
     outputHeading: "कायदेशीर अर्ज यशस्वीरित्या तयार झाला आहे",
     outputSub: "खालील अर्जाची खात्री करा. हा अर्ज कॉपी, प्रिंट किंवा डाउनलोड करून संबंधित कार्यालयात सादर करा.",
@@ -583,7 +583,7 @@ const UI_TRANSLATIONS = {
     expectedRes: "निवारण हमी कालावधी (SLA):",
     helplinePhone: "थेट विभागीय हेल्पलाइन नंबर:",
     portalLink: "अधिकृत वेब पोर्टल:",
-    
+
     // Canned scenarios
     demoScenariosTitle: "वास्तविक उदाहरणे",
     demoScenariosSub: "अर्ज त्वरित भरण्यासाठी खालील कोणत्याही उदाहरणावर क्लिक करा.",
@@ -593,10 +593,10 @@ const UI_TRANSLATIONS = {
     demo2Desc: "गेल्या २ महिन्यांचे श्रावणबाळ किंवा निराधार मानधन जमा न झाल्याबाबत.",
     demo3Title: "उदाहरण ३: रस्ते दुरुस्ती RTI",
     demo3Desc: "प्रभागातील रस्त्यांच्या दुरुस्ती खर्चाचा हिशोब व निविदा मिळवण्यासाठी RTI.",
-    
+
     // Rights section
     rightsHeader: "आपले कायदेशीर हक्क (RTI कलम ६ व महाराष्ट्र लोकसेवा हक्क २०१५)",
-    
+
     sandboxLabel: "नागरिक सेवा सहाय्यता कक्ष",
     orOtherStateModel: "राष्ट्रीय / इतर राज्य मॉडेल",
     stateSelectSubtext: "* महाराष्ट्र (BMC, PMC, महावितरण) व पश्चिम बंगालच्या अधिकृत नियमांशी थेट संलग्न.",
@@ -733,7 +733,7 @@ const CIVIC_CATEGORIES = [
 export default function App() {
   const [lang, setLang] = useState<LanguageCode>("en");
   const [activeTab, setActiveTab] = useState<"create" | "rights" | "helplines" | "my_complaints">("create");
-  
+
   // Voice input state
   const [isListening, setIsListening] = useState(false);
   const [speechSupported, setSpeechSupported] = useState(true);
@@ -749,7 +749,7 @@ export default function App() {
   const [profile, setProfile] = useState<UserProfile>(() => {
     const saved = localStorage.getItem("nagrik_user_profile");
     if (saved) {
-      try { return JSON.parse(saved); } catch (e) {}
+      try { return JSON.parse(saved); } catch (e) { }
     }
     return {
       name: "",
@@ -769,7 +769,7 @@ export default function App() {
   const [savedComplaints, setSavedComplaints] = useState<SavedComplaint[]>(() => {
     const saved = localStorage.getItem("nagrik_saved_complaints");
     if (saved) {
-      try { return JSON.parse(saved); } catch (e) {}
+      try { return JSON.parse(saved); } catch (e) { }
     }
     return [];
   });
@@ -782,10 +782,10 @@ export default function App() {
   const [duration, setDuration] = useState("3-7 days");
   const [prevRef, setPrevRef] = useState("");
   const [docType, setDocType] = useState<"complaint" | "rti" | "both">("both");
-  
+
   // Stepper state
   const [currentStep, setCurrentStep] = useState(1);
-  
+
   // In-place editable draft buffers
   const [editableComplaint, setEditableComplaint] = useState("");
   const [editableRti, setEditableRti] = useState("");
@@ -1061,10 +1061,10 @@ export default function App() {
         lang === "bn"
           ? "আমার এলাকায় গত ৩ দিন ধরে কোনো পাইপের জল আসছে না। জলের প্রচণ্ড কষ্ট হচ্ছে, বয়স্ক ও শিশুরা খাওয়ার জল পাচ্ছে না।"
           : lang === "hi"
-          ? "हमारे इलाके में पिछले 3 दिनों से नलों में पानी बिल्कुल नहीं आ रहा है। लोग पीने के पानी के लिए परेशान हैं।"
-          : lang === "mr"
-          ? "आमच्या भागात गेल्या ३ दिवसांपासून नळाला पाणी येत नाही. पिण्याच्या पाण्यासाठी नागरिकांचे मोठे हाल होत आहेत."
-          : "For the last 3 days there is absolute no municipal water supply in our ward. Residents and children are facing severe shortage."
+            ? "हमारे इलाके में पिछले 3 दिनों से नलों में पानी बिल्कुल नहीं आ रहा है। लोग पीने के पानी के लिए परेशान हैं।"
+            : lang === "mr"
+              ? "आमच्या भागात गेल्या ३ दिवसांपासून नळाला पाणी येत नाही. पिण्याच्या पाण्यासाठी नागरिकांचे मोठे हाल होत आहेत."
+              : "For the last 3 days there is absolute no municipal water supply in our ward. Residents and children are facing severe shortage."
       );
       setDuration("3-7 days");
       setPrevRef("");
@@ -1077,10 +1077,10 @@ export default function App() {
         lang === "bn"
           ? "আমার বার্ধক্য পেনশন গত ২ মাস ধরে ব্যাংকে জমা পড়েনি। আমি একজন প্রবীণ নাগরিক এবং অন্য কোনো আয়ের উৎস নেই।"
           : lang === "hi"
-          ? "मेरी वृद्धावस्था पेंशन पिछले 2 महीनों से बैंक खाते में जमा नहीं हुई है। मैं एक बुजुर्ग नागरिक हूं।"
-          : lang === "mr"
-          ? "माझे श्रावणबाळ/संजय गांधी निराधार योजनेचे मासिक मानधन गेल्या २ महिन्यांपासून बँक खात्यात जमा झालेले नाही."
-          : "My monthly welfare senior citizen pension has not been credited to my bank account for the last 2 cycles."
+            ? "मेरी वृद्धावस्था पेंशन पिछले 2 महीनों से बैंक खाते में जमा नहीं हुई है। मैं एक बुजुर्ग नागरिक हूं।"
+            : lang === "mr"
+              ? "माझे श्रावणबाळ/संजय गांधी निराधार योजनेचे मासिक मानधन गेल्या २ महिन्यांपासून बँक खात्यात जमा झालेले नाही."
+              : "My monthly welfare senior citizen pension has not been credited to my bank account for the last 2 cycles."
       );
       setDuration("1-4 weeks");
       setPrevRef("MH-PENS-5532A");
@@ -1093,10 +1093,10 @@ export default function App() {
         lang === "bn"
           ? "আমি বিগত ২ অর্থবর্ষে আমার ওয়ার্ডের রাস্তা মেরামতের কাজের বরাদ্দকৃত ব্যয়ের হিসাব ও টেন্ডারের নথিপত্র চেয়ে RTI আবেদন করতে চাই।"
           : lang === "hi"
-          ? "मैं पिछले 2 वित्तीय वर्षों में हमारे वार्ड की सड़क मरम्मत कार्य के खर्च और टेंडर की जानकारी हेतु आरटीआई दाखिल करना चाहता हूं।"
-          : lang === "mr"
-          ? "गेल्या २ वर्षांत आमच्या प्रभागातील रस्ते दुरुस्तीसाठी खर्च झालेला निधी व निविदांची माहिती मिळवण्यासाठी RTI अर्ज."
-          : "I want to file an RTI application to obtain official expenditure accounts and repair tenders allocated to our ward road works."
+            ? "मैं पिछले 2 वित्तीय वर्षों में हमारे वार्ड की सड़क मरम्मत कार्य के खर्च और टेंडर की जानकारी हेतु आरटीआई दाखिल करना चाहता हूं।"
+            : lang === "mr"
+              ? "गेल्या २ वर्षांत आमच्या प्रभागातील रस्ते दुरुस्तीसाठी खर्च झालेला निधी व निविदांची माहिती मिळवण्यासाठी RTI अर्ज."
+              : "I want to file an RTI application to obtain official expenditure accounts and repair tenders allocated to our ward road works."
       );
       setDuration("More than a month");
       setPrevRef("");
@@ -1146,13 +1146,13 @@ export default function App() {
       }
 
       const text = data.rawText;
-      
+
       let complaint = "";
       let rti = "";
       let summary = "";
 
       const parts = text.split(/(?=# COMPLAINT_DOCUMENT|# RTI_DOCUMENT|# CITIZEN_SUMMARY)/g);
-      
+
       parts.forEach((part: string) => {
         if (part.startsWith("# COMPLAINT_DOCUMENT")) {
           complaint = part.replace("# COMPLAINT_DOCUMENT", "").trim();
@@ -1242,11 +1242,11 @@ export default function App() {
 
   return (
     <div id="nagrik_seva_root" className="min-h-screen bg-cream flex flex-col justify-between">
-      
+
       {/* ─── HEADER ────────────────────────────────────────────── */}
       <header className="bg-white/95 backdrop-blur-md border-b border-warm-border sticky top-0 z-50 py-3.5 px-4 sm:px-6 lg:px-8 shadow-xs">
         <div className="max-w-6xl mx-auto flex items-center justify-between gap-3">
-          
+
           {/* Logo & Title */}
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-xl bg-saffron flex items-center justify-center text-white font-black shadow-md shadow-saffron/20">
@@ -1264,7 +1264,7 @@ export default function App() {
 
           {/* Right Action Bar */}
           <div className="flex items-center gap-2.5">
-            
+
             {/* 4-Language Selector Dropdown */}
             <div className="relative">
               <select
@@ -1285,11 +1285,10 @@ export default function App() {
             <button
               id="user_profile_modal_btn"
               onClick={() => setShowProfileModal(true)}
-              className={`px-3.5 py-2 rounded-full text-xs sm:text-sm font-bold flex items-center gap-1.5 transition-all cursor-pointer border shadow-xs ${
-                profile.name
+              className={`px-3.5 py-2 rounded-full text-xs sm:text-sm font-bold flex items-center gap-1.5 transition-all cursor-pointer border shadow-xs ${profile.name
                   ? "bg-sage-light text-sage-dark border-sage/30 hover:bg-sage/20"
                   : "bg-white text-warm-charcoal border-warm-border hover:bg-warm-bg"
-              }`}
+                }`}
             >
               <User className="h-4 w-4 text-saffron" />
               <span className="hidden sm:inline">{profile.name ? profile.name.split(" ")[0] : strings.myAccountBtn}</span>
@@ -1319,23 +1318,23 @@ export default function App() {
       {/* ─── HERO SECTION ──────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-gradient-to-b from-saffron-50 via-cream-dark to-cream py-12 md:py-16 px-4 border-b border-warm-border">
         {/* Subtle authentic Indian civic architecture overlay */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-[0.18] pointer-events-none"
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-[0.50] pointer-events-none"
           style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
         />
-        
+
         <div className="relative max-w-4xl mx-auto text-center animate-fade-in-up">
           {/* Tricolor top accent stripe */}
           <div className="h-1.5 w-24 bg-gradient-to-r from-tricolor-saffron via-white to-tricolor-green rounded-full mx-auto mb-5 shadow-xs"></div>
-          
+
           <span className="inline-block text-xs font-bold bg-white text-saffron-dark uppercase tracking-widest px-4 py-1.5 rounded-full mb-3.5 border border-warm-border shadow-xs">
             {strings.nationalBadge}
           </span>
-          
+
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-3.5 font-display text-warm-charcoal">
             {strings.brandName}
           </h1>
-          
+
           <p className="text-warm-grey text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto mb-3 font-normal">
             {strings.tagline}
           </p>
@@ -1348,7 +1347,7 @@ export default function App() {
 
       {/* ─── PRIMARY DASHBOARD ─────────────────────────────────── */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        
+
         {/* ── Tab Navigation ── */}
         <div className="flex flex-wrap gap-2 mb-8 justify-center">
           {[
@@ -1361,11 +1360,10 @@ export default function App() {
               key={tab.key}
               id={`tab_${tab.key}_btn`}
               onClick={() => setActiveTab(tab.key)}
-              className={`py-2.5 sm:py-3 px-4 sm:px-6 text-xs sm:text-sm font-bold flex items-center gap-2 rounded-full transition-all cursor-pointer active:scale-95 ${
-                activeTab === tab.key
+              className={`py-2.5 sm:py-3 px-4 sm:px-6 text-xs sm:text-sm font-bold flex items-center gap-2 rounded-full transition-all cursor-pointer active:scale-95 ${activeTab === tab.key
                   ? "bg-saffron text-white shadow-lg shadow-saffron/20"
                   : "bg-white text-warm-charcoal hover:bg-saffron-50 border border-warm-border shadow-xs hover:shadow-sm"
-              }`}
+                }`}
             >
               {tab.icon}
               {tab.label}
@@ -1376,7 +1374,7 @@ export default function App() {
         {/* ── CREATE TAB WORKSPACE ── */}
         {activeTab === "create" && (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 animate-fade-in">
-            
+
             {/* Left/Middle Column (Form & Stepper) */}
             <div className="lg:col-span-2 space-y-6">
 
@@ -1387,26 +1385,24 @@ export default function App() {
                     <React.Fragment key={step}>
                       <div className="flex flex-col items-center">
                         <div
-                          className={`h-9 w-9 sm:h-10 sm:w-10 rounded-full flex items-center justify-center text-sm sm:text-base font-display font-black transition-all ${
-                            currentStep >= step
+                          className={`h-9 w-9 sm:h-10 sm:w-10 rounded-full flex items-center justify-center text-sm sm:text-base font-display font-black transition-all ${currentStep >= step
                               ? step === 4 && currentStep === 4
                                 ? "bg-sage text-white shadow-lg shadow-sage/30"
                                 : "bg-saffron text-white shadow-lg shadow-saffron/20"
                               : "bg-warm-bg text-warm-grey border-2 border-warm-border"
-                          }`}
+                            }`}
                         >
                           {currentStep > step ? <Check className="h-5 w-5" /> : step}
                         </div>
                       </div>
                       {step < 4 && (
-                        <div className={`h-0.5 w-6 sm:w-10 mx-1 rounded-full transition-all ${
-                          currentStep > step ? "bg-saffron" : "bg-warm-border"
-                        }`} />
+                        <div className={`h-0.5 w-6 sm:w-10 mx-1 rounded-full transition-all ${currentStep > step ? "bg-saffron" : "bg-warm-border"
+                          }`} />
                       )}
                     </React.Fragment>
                   ))}
                 </div>
-                
+
                 <span className="text-xs sm:text-sm bg-saffron-50 text-saffron-dark px-3.5 py-1.5 rounded-full font-bold border border-saffron-light/40 text-center">
                   {currentStep === 1 && strings.stepLocation}
                   {currentStep === 2 && strings.stepCategory}
@@ -1428,7 +1424,7 @@ export default function App() {
 
               {/* Step Content Card */}
               <div className="card-warm p-6 sm:p-8">
-                
+
                 {/* ── STEP 1: REGION & LOCATION ── */}
                 {currentStep === 1 && (
                   <div className="space-y-6 animate-fade-in-up">
@@ -1459,7 +1455,7 @@ export default function App() {
                         <span>{strings.locationDetected}: <strong>{detectedLocationName}</strong></span>
                       </div>
                     )}
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className="text-sm font-bold text-warm-charcoal block">
@@ -1568,7 +1564,7 @@ export default function App() {
                         {strings.stepCategory}
                       </h2>
                     </div>
-                    
+
                     <p className="text-warm-grey text-sm font-medium">
                       {strings.selectCategory}
                     </p>
@@ -1584,11 +1580,10 @@ export default function App() {
                             id={`cat_card_${cat.id}`}
                             key={cat.id}
                             onClick={() => setSelectedCategory(cat.id)}
-                            className={`group overflow-hidden rounded-2xl border-2 text-left transition-all relative flex flex-col cursor-pointer active:scale-[0.98] animate-fade-in-up stagger-${idx + 1} ${
-                              isSel
+                            className={`group overflow-hidden rounded-2xl border-2 text-left transition-all relative flex flex-col cursor-pointer active:scale-[0.98] animate-fade-in-up stagger-${idx + 1} ${isSel
                                 ? "border-saffron bg-saffron-50/50 ring-2 ring-saffron/30 shadow-md"
                                 : "border-warm-border bg-white hover:bg-warm-bg hover:border-saffron-light shadow-xs hover:shadow-sm"
-                            }`}
+                              }`}
                           >
                             {/* Photographic thumbnail */}
                             <div className="relative h-28 w-full overflow-hidden bg-warm-border/40">
@@ -1599,7 +1594,7 @@ export default function App() {
                                 loading="lazy"
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-warm-charcoal/60 via-transparent to-transparent" />
-                              
+
                               {/* Icon badge over photo */}
                               <div className={`absolute bottom-2.5 left-3 p-2 rounded-xl bg-white shadow-md border ${cat.borderColor}`}>
                                 <CategoryIcon className={`h-5 w-5 ${cat.color}`} />
@@ -1636,7 +1631,7 @@ export default function App() {
                         <ArrowLeft className="h-5 w-5" />
                         {strings.btnBack}
                       </button>
-                      
+
                       <button
                         id="step2_next_btn"
                         onClick={() => setCurrentStep(3)}
@@ -1675,9 +1670,8 @@ export default function App() {
                           value={problemDescription}
                           onChange={(e) => setProblemDescription(e.target.value)}
                           placeholder={strings.issueDescPlaceholder}
-                          className={`w-full bg-warm-bg border rounded-xl p-4 pr-14 text-base shadow-xs focus:ring-2 focus:ring-saffron/30 focus:border-saffron font-medium transition-all leading-relaxed ${
-                            isListening ? "border-saffron ring-2 ring-saffron/20 bg-saffron-50/20" : "border-warm-border"
-                          }`}
+                          className={`w-full bg-warm-bg border rounded-xl p-4 pr-14 text-base shadow-xs focus:ring-2 focus:ring-saffron/30 focus:border-saffron font-medium transition-all leading-relaxed ${isListening ? "border-saffron ring-2 ring-saffron/20 bg-saffron-50/20" : "border-warm-border"
+                            }`}
                         />
 
                         {/* Floating Mic Dictation Button */}
@@ -1687,11 +1681,10 @@ export default function App() {
                             type="button"
                             onClick={toggleVoiceInput}
                             title={isListening ? strings.micStop : strings.micStart}
-                            className={`p-3 rounded-full shadow-md transition-all cursor-pointer active:scale-90 flex items-center justify-center ${
-                              isListening
+                            className={`p-3 rounded-full shadow-md transition-all cursor-pointer active:scale-90 flex items-center justify-center ${isListening
                                 ? "bg-saffron text-white animate-mic-listening shadow-saffron/40"
                                 : "bg-white text-saffron hover:bg-saffron-50 border border-warm-border"
-                            }`}
+                              }`}
                           >
                             {isListening ? <MicOff className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
                           </button>
@@ -1762,7 +1755,7 @@ export default function App() {
                       <label className="text-sm font-bold text-warm-charcoal block">
                         {strings.docTypeLabel}
                       </label>
-                      
+
                       <div className="space-y-2.5">
                         {[
                           { id: "both", label: strings.docBoth, desc: strings.bothDocDesc, icon: FileCheck },
@@ -1774,11 +1767,10 @@ export default function App() {
                           return (
                             <label
                               key={dt.id}
-                              className={`flex items-start gap-4 p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                                isSel
+                              className={`flex items-start gap-4 p-4 rounded-xl border-2 transition-all cursor-pointer ${isSel
                                   ? "border-saffron bg-white shadow-xs"
                                   : "border-transparent bg-transparent hover:bg-white/60"
-                              }`}
+                                }`}
                             >
                               <input
                                 id={`doc_radio_${dt.id}`}
@@ -1810,16 +1802,15 @@ export default function App() {
                         <ArrowLeft className="h-5 w-5" />
                         {strings.btnBack}
                       </button>
-                      
+
                       <button
                         id="step3_generate_btn"
                         disabled={problemDescription.trim().length < 15 || loading}
                         onClick={handleGenerateDocument}
-                        className={`font-bold px-8 py-3.5 rounded-xl text-base flex items-center gap-2 shadow-lg transition-all cursor-pointer active:scale-95 ${
-                          problemDescription.trim().length >= 15 && !loading
+                        className={`font-bold px-8 py-3.5 rounded-xl text-base flex items-center gap-2 shadow-lg transition-all cursor-pointer active:scale-95 ${problemDescription.trim().length >= 15 && !loading
                             ? "bg-sage hover:bg-sage-dark text-white shadow-sage/20 hover:shadow-xl"
                             : "bg-warm-bg text-warm-grey/50 cursor-not-allowed shadow-none"
-                        }`}
+                          }`}
                       >
                         {loading ? strings.btnGenerating : strings.btnGenerate}
                         {loading ? <RefreshCw className="h-5 w-5 animate-spin" /> : <ArrowRight className="h-5 w-5" />}
@@ -1862,14 +1853,13 @@ export default function App() {
                             setActiveDocSubTab("complaint");
                             setIsEditingDraft(false);
                           }}
-                          className={`flex-1 py-2.5 text-xs sm:text-sm font-bold transition-all rounded-xl cursor-pointer ${
-                            activeDocSubTab === "complaint" ? "bg-white text-warm-charcoal shadow-xs" : "text-warm-grey hover:text-warm-charcoal"
-                          }`}
+                          className={`flex-1 py-2.5 text-xs sm:text-sm font-bold transition-all rounded-xl cursor-pointer ${activeDocSubTab === "complaint" ? "bg-white text-warm-charcoal shadow-xs" : "text-warm-grey hover:text-warm-charcoal"
+                            }`}
                         >
                           {strings.tabDocComplaint}
                         </button>
                       )}
-                      
+
                       {(docType === "rti" || docType === "both") && (
                         <button
                           id="btn_subtab_rti"
@@ -1877,9 +1867,8 @@ export default function App() {
                             setActiveDocSubTab("rti");
                             setIsEditingDraft(false);
                           }}
-                          className={`flex-1 py-2.5 text-xs sm:text-sm font-bold transition-all rounded-xl cursor-pointer ${
-                            activeDocSubTab === "rti" ? "bg-white text-warm-charcoal shadow-xs" : "text-warm-grey hover:text-warm-charcoal"
-                          }`}
+                          className={`flex-1 py-2.5 text-xs sm:text-sm font-bold transition-all rounded-xl cursor-pointer ${activeDocSubTab === "rti" ? "bg-white text-warm-charcoal shadow-xs" : "text-warm-grey hover:text-warm-charcoal"
+                            }`}
                         >
                           {strings.tabDocRti}
                         </button>
@@ -1891,9 +1880,8 @@ export default function App() {
                           setActiveDocSubTab("summary");
                           setIsEditingDraft(false);
                         }}
-                        className={`flex-1 py-2.5 text-xs sm:text-sm font-bold transition-all rounded-xl cursor-pointer ${
-                          activeDocSubTab === "summary" ? "bg-white text-warm-charcoal shadow-xs" : "text-warm-grey hover:text-warm-charcoal"
-                        }`}
+                        className={`flex-1 py-2.5 text-xs sm:text-sm font-bold transition-all rounded-xl cursor-pointer ${activeDocSubTab === "summary" ? "bg-white text-warm-charcoal shadow-xs" : "text-warm-grey hover:text-warm-charcoal"
+                          }`}
                       >
                         {strings.tabDocSummary}
                       </button>
@@ -1901,7 +1889,7 @@ export default function App() {
 
                     {/* ── Document Preview (Paper Style) ── */}
                     <div className="paper-preview p-6 sm:p-8 overflow-hidden">
-                      
+
                       {/* Action Bar */}
                       <div className="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-warm-border/50">
                         {/* Status Label */}
@@ -1920,9 +1908,8 @@ export default function App() {
                           <button
                             id="btn_edit_toggle_draft"
                             onClick={() => setIsEditingDraft(!isEditingDraft)}
-                            className={`${
-                              isEditingDraft ? "bg-saffron text-white" : "bg-warm-bg hover:bg-warm-border text-warm-charcoal"
-                            } px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all shadow-xs cursor-pointer active:scale-95`}
+                            className={`${isEditingDraft ? "bg-saffron text-white" : "bg-warm-bg hover:bg-warm-border text-warm-charcoal"
+                              } px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all shadow-xs cursor-pointer active:scale-95`}
                           >
                             <FileText className="h-3.5 w-3.5" />
                             {isEditingDraft ? strings.btnFinishEditing : strings.btnEditDraft}
@@ -1934,9 +1921,8 @@ export default function App() {
                               const curText = activeDocSubTab === "complaint" ? editableComplaint : activeDocSubTab === "rti" ? editableRti : editableSummary;
                               copyTextToClipboard(curText);
                             }}
-                            className={`${
-                              copiedStatus ? "bg-sage text-white" : "bg-warm-bg hover:bg-warm-border text-warm-charcoal"
-                            } px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all shadow-xs cursor-pointer active:scale-95`}
+                            className={`${copiedStatus ? "bg-sage text-white" : "bg-warm-bg hover:bg-warm-border text-warm-charcoal"
+                              } px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all shadow-xs cursor-pointer active:scale-95`}
                           >
                             {copiedStatus ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
                             {copiedStatus ? strings.btnCopied : strings.btnCopy}
@@ -1949,9 +1935,8 @@ export default function App() {
                               const title = activeDocSubTab === "complaint" ? "Complaint Letter" : activeDocSubTab === "rti" ? "RTI Application" : "Citizen Advisory";
                               downloadTextFile(title, curText);
                             }}
-                            className={`${
-                              downloadStatus ? "bg-sage text-white" : "bg-warm-bg hover:bg-warm-border text-warm-charcoal"
-                            } px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all shadow-xs cursor-pointer active:scale-95`}
+                            className={`${downloadStatus ? "bg-sage text-white" : "bg-warm-bg hover:bg-warm-border text-warm-charcoal"
+                              } px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all shadow-xs cursor-pointer active:scale-95`}
                           >
                             {downloadStatus ? <CheckCircle className="h-3.5 w-3.5" /> : <Download className="h-3.5 w-3.5" />}
                             {downloadStatus ? strings.btnDownloaded : strings.btnDownload}
@@ -1978,8 +1963,8 @@ export default function App() {
                             activeDocSubTab === "complaint"
                               ? editableComplaint
                               : activeDocSubTab === "rti"
-                              ? editableRti
-                              : editableSummary
+                                ? editableRti
+                                : editableSummary
                           }
                           onChange={(e) => {
                             const val = e.target.value;
@@ -2004,7 +1989,7 @@ export default function App() {
                         <span className="text-warm-grey font-bold block text-xs uppercase tracking-wider">
                           {strings.nodalOfficeTargets}
                         </span>
-                        
+
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                           <div className="space-y-1.5">
                             <span className="text-warm-grey text-sm block">{strings.expectedRes}</span>
@@ -2069,9 +2054,8 @@ export default function App() {
                           return (
                             <label
                               key={item.id}
-                              className={`flex items-start gap-3.5 p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                                item.done ? "border-sage/30 bg-sage-light shadow-xs" : "border-warm-border bg-white hover:bg-warm-bg"
-                              }`}
+                              className={`flex items-start gap-3.5 p-4 rounded-xl border-2 transition-all cursor-pointer ${item.done ? "border-sage/30 bg-sage-light shadow-xs" : "border-warm-border bg-white hover:bg-warm-bg"
+                                }`}
                             >
                               <input
                                 type="checkbox"
@@ -2112,7 +2096,7 @@ export default function App() {
                         <p className="text-sage-dark text-sm leading-relaxed">
                           {strings.groundingAlert}
                         </p>
-                        
+
                         <div className="space-y-2.5 pt-1">
                           {generatedResult.sources.map((source, index) => {
                             const srcTitle = lang === "bn" ? (source.source_bn || source.source) : lang === "hi" ? (source.source_hi || source.source) : lang === "mr" ? (source.source_mr || source.source) : source.source;
@@ -2164,7 +2148,7 @@ export default function App() {
                 )}
 
               </div>
-              
+
             </div>
 
             {/* ── RIGHT SIDEBAR ── */}
@@ -2234,7 +2218,7 @@ export default function App() {
                 <div className="card-warm p-5 space-y-3.5 animate-slide-in">
                   <div className="flex items-center gap-2">
                     <span className="relative flex h-2.5 w-2.5">
-                       <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-saffron"></span>
+                      <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-saffron"></span>
                     </span>
                     <span className="text-warm-grey font-bold block text-xs uppercase tracking-wider">
                       {strings.databaseCheckTitle}
@@ -2278,7 +2262,7 @@ export default function App() {
                 <span className="text-warm-grey font-bold block text-xs uppercase tracking-wider border-b border-warm-border/50 pb-2.5">
                   {strings.municipalSlaTitle}
                 </span>
-                
+
                 <p className="text-sm text-warm-grey leading-relaxed">
                   {strings.municipalSlaDesc}
                 </p>
@@ -2497,7 +2481,7 @@ export default function App() {
                 );
               })}
             </div>
-            
+
             <div className="p-5 bg-amber-50 text-amber-900 rounded-2xl border border-amber-200 flex gap-4 items-start leading-relaxed">
               <AlertTriangle className="h-6 w-6 text-amber-600 shrink-0 mt-0.5" />
               <div>
@@ -2527,101 +2511,101 @@ export default function App() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {[
-                { 
-                  org_en: "Brihanmumbai Corp (BMC) Control", 
-                  org_bn: "বৃহন্মুম্বাই পৌরনিগম (BMC) হেল্পলাইন", 
-                  org_hi: "बृहन्मुंबई नगर निगम (बीएमसी) कंट्रोल", 
-                  org_mr: "बृहन्मुंबई महानगरपालिका (BMC) नियंत्रण कक्ष", 
-                  number: "1916", 
-                  purpose_en: "Civic emergencies, water, drainage & roads", 
-                  purpose_bn: "জরুরি পৌর সমস্যা, জল ও নিকাশি", 
-                  purpose_hi: "जल, सड़क एवं आपातकालीन सेवाएं", 
-                  purpose_mr: "पाणी, रस्ते, सांडपाणी व आपत्कालीन तक्रारी", 
-                  area_en: "Mumbai, Maharashtra", 
-                  area_bn: "মুম্বাই, মহারাষ্ট্র", 
-                  area_hi: "मुंबई, महाराष्ट्र", 
-                  area_mr: "मुंबई, महाराष्ट्र", 
-                  icon: Building2 
+                {
+                  org_en: "Brihanmumbai Corp (BMC) Control",
+                  org_bn: "বৃহন্মুম্বাই পৌরনিগম (BMC) হেল্পলাইন",
+                  org_hi: "बृहन्मुंबई नगर निगम (बीएमसी) कंट्रोल",
+                  org_mr: "बृहन्मुंबई महानगरपालिका (BMC) नियंत्रण कक्ष",
+                  number: "1916",
+                  purpose_en: "Civic emergencies, water, drainage & roads",
+                  purpose_bn: "জরুরি পৌর সমস্যা, জল ও নিকাশি",
+                  purpose_hi: "जल, सड़क एवं आपातकालीन सेवाएं",
+                  purpose_mr: "पाणी, रस्ते, सांडपाणी व आपत्कालीन तक्रारी",
+                  area_en: "Mumbai, Maharashtra",
+                  area_bn: "মুম্বাই, মহারাষ্ট্র",
+                  area_hi: "मुंबई, महाराष्ट्र",
+                  area_mr: "मुंबई, महाराष्ट्र",
+                  icon: Building2
                 },
-                { 
-                  org_en: "Maharashtra Electricity (MSEDCL / Mahavitaran)", 
-                  org_bn: "মহাবিতরণ বিদ্যুৎ হেল্পডেস্ক (MSEDCL)", 
-                  org_hi: "महावितरण विद्युत वितरण हेल्पलाइन", 
-                  org_mr: "महावितरण वीज तक्रार निवारण कक्ष", 
-                  number: "1800-233-3435", 
-                  purpose_en: "Power breakdown, fuse, billing", 
-                  purpose_bn: "বিদ্যুৎ বিভ্রাট ও বিলিং সংক্রান্ত", 
-                  purpose_hi: "बिजली ब्रेकडाउन एवं बिल सुधार", 
-                  purpose_mr: "वीज खंडित, फ्युज व बिलिंग तक्रारी", 
-                  area_en: "State-wide, Maharashtra", 
-                  area_bn: "সমগ্র মহারাষ্ট্র", 
-                  area_hi: "समग्र महाराष्ट्र", 
-                  area_mr: "संपूर्ण महाराष्ट्र", 
-                  icon: Zap 
+                {
+                  org_en: "Maharashtra Electricity (MSEDCL / Mahavitaran)",
+                  org_bn: "মহাবিতরণ বিদ্যুৎ হেল্পডেস্ক (MSEDCL)",
+                  org_hi: "महावितरण विद्युत वितरण हेल्पलाइन",
+                  org_mr: "महावितरण वीज तक्रार निवारण कक्ष",
+                  number: "1800-233-3435",
+                  purpose_en: "Power breakdown, fuse, billing",
+                  purpose_bn: "বিদ্যুৎ বিভ্রাট ও বিলিং সংক্রান্ত",
+                  purpose_hi: "बिजली ब्रेकडाउन एवं बिल सुधार",
+                  purpose_mr: "वीज खंडित, फ्युज व बिलिंग तक्रारी",
+                  area_en: "State-wide, Maharashtra",
+                  area_bn: "সমগ্র মহারাষ্ট্র",
+                  area_hi: "समग्र महाराष्ट्र",
+                  area_mr: "संपूर्ण महाराष्ट्र",
+                  icon: Zap
                 },
-                { 
-                  org_en: "Kolkata Municipal Corporation (KMC)", 
-                  org_bn: "কলকাতা পৌরনিগম (KMC) হেল্পলাইন", 
-                  org_hi: "कोलकाता नगर निगम (केएमसी) कंट्रोल", 
-                  org_mr: "कोलकाता महानगरपालिका (KMC)", 
-                  number: "1800-103-4444", 
-                  purpose_en: "Civic grievances, water supply, SWM", 
-                  purpose_bn: "নাগরিক অভিযোগ ও জল সরবরাহ", 
-                  purpose_hi: "नागरिक शिकायत एवं जल आपूर्ति", 
-                  purpose_mr: "नागरी तक्रारी व पाणी पुरवठा", 
-                  area_en: "Kolkata, West Bengal", 
-                  area_bn: "কলকাতা, পশ্চিমবঙ্গ", 
-                  area_hi: "कोलकाता, पश्चिम बंगाल", 
-                  area_mr: "कोलकाता, पश्चिम बंगाल", 
-                  icon: Building2 
+                {
+                  org_en: "Kolkata Municipal Corporation (KMC)",
+                  org_bn: "কলকাতা পৌরনিগম (KMC) হেল্পলাইন",
+                  org_hi: "कोलकाता नगर निगम (केएमसी) कंट्रोल",
+                  org_mr: "कोलकाता महानगरपालिका (KMC)",
+                  number: "1800-103-4444",
+                  purpose_en: "Civic grievances, water supply, SWM",
+                  purpose_bn: "নাগরিক অভিযোগ ও জল সরবরাহ",
+                  purpose_hi: "नागरिक शिकायत एवं जल आपूर्ति",
+                  purpose_mr: "नागरी तक्रारी व पाणी पुरवठा",
+                  area_en: "Kolkata, West Bengal",
+                  area_bn: "কলকাতা, পশ্চিমবঙ্গ",
+                  area_hi: "कोलकाता, पश्चिम बंगाल",
+                  area_mr: "कोलकाता, पश्चिम बंगाल",
+                  icon: Building2
                 },
-                { 
-                  org_en: "WB Electricity Support (WBSEDCL)", 
-                  org_bn: "বিদ্যুৎ পর্ষদ হেল্পডেস্ক (WBSEDCL)", 
-                  org_hi: "पश्चिम बंगाल विद्युत निगम", 
-                  org_mr: "पश्चिम बंगाल वीज महामंडळ", 
-                  number: "19121", 
-                  purpose_en: "Power disruptions & lines safety", 
-                  purpose_bn: "বিদ্যুৎ বিভ্রাট ও তারের সুরক্ষা", 
-                  purpose_hi: "बिजली कटौती एवं सुरक्षा", 
-                  purpose_mr: "वीज पुरवठा खंडित तक्रारी", 
-                  area_en: "State-wide, West Bengal", 
-                  area_bn: "সমগ্র পশ্চিমবঙ্গ", 
-                  area_hi: "समग्र पश्चिम बंगाल", 
-                  area_mr: "संपूर्ण पश्चिम बंगाल", 
-                  icon: Zap 
+                {
+                  org_en: "WB Electricity Support (WBSEDCL)",
+                  org_bn: "বিদ্যুৎ পর্ষদ হেল্পডেস্ক (WBSEDCL)",
+                  org_hi: "पश्चिम बंगाल विद्युत निगम",
+                  org_mr: "पश्चिम बंगाल वीज महामंडळ",
+                  number: "19121",
+                  purpose_en: "Power disruptions & lines safety",
+                  purpose_bn: "বিদ্যুৎ বিভ্রাট ও তারের সুরক্ষা",
+                  purpose_hi: "बिजली कटौती एवं सुरक्षा",
+                  purpose_mr: "वीज पुरवठा खंडित तक्रारी",
+                  area_en: "State-wide, West Bengal",
+                  area_bn: "সমগ্র পশ্চিমবঙ্গ",
+                  area_hi: "समग्र पश्चिम बंगाल",
+                  area_mr: "संपूर्ण पश्चिम बंगाल",
+                  icon: Zap
                 },
-                { 
-                  org_en: "National Social Assistance Office", 
-                  org_bn: "জাতীয় সামাজিক সহায়তা কেন্দ্র", 
-                  org_hi: "राष्ट्रीय सामाजिक सहायता केंद्र", 
-                  org_mr: "राष्ट्रीय सामाजिक सहाय्यता कक्ष", 
-                  number: "1800-11-1555", 
-                  purpose_en: "Senior citizen & widow pensions", 
-                  purpose_bn: "বার্ধক্য ও বিধবা ভাতা সংক্রান্ত", 
-                  purpose_hi: "वृद्धावस्था एवं विधवा पेंशन", 
-                  purpose_mr: "वृद्ध व विधवा पेन्शन चौकशी", 
-                  area_en: "National / India", 
-                  area_bn: "জাতীয় / সমগ্র ভারত", 
-                  area_hi: "राष्ट्रीय / संपूर्ण भारत", 
-                  area_mr: "राष्ट्रीय / संपूर्ण भारत", 
-                  icon: Users 
+                {
+                  org_en: "National Social Assistance Office",
+                  org_bn: "জাতীয় সামাজিক সহায়তা কেন্দ্র",
+                  org_hi: "राष्ट्रीय सामाजिक सहायता केंद्र",
+                  org_mr: "राष्ट्रीय सामाजिक सहाय्यता कक्ष",
+                  number: "1800-11-1555",
+                  purpose_en: "Senior citizen & widow pensions",
+                  purpose_bn: "বার্ধক্য ও বিধবা ভাতা সংক্রান্ত",
+                  purpose_hi: "वृद्धावस्था एवं विधवा पेंशन",
+                  purpose_mr: "वृद्ध व विधवा पेन्शन चौकशी",
+                  area_en: "National / India",
+                  area_bn: "জাতীয় / সমগ্র ভারত",
+                  area_hi: "राष्ट्रीय / संपूर्ण भारत",
+                  area_mr: "राष्ट्रीय / संपूर्ण भारत",
+                  icon: Users
                 },
-                { 
-                  org_en: "Jal Jeevan Drinking Water Mission", 
-                  org_bn: "জল জীবন মিশন সহায়তা", 
-                  org_hi: "जल जीवन मिशन पेयजल डेस्क", 
-                  org_mr: "जल जीवन मिशन पाणी पुरवठा कक्ष", 
-                  number: "1800-180-3535", 
-                  purpose_en: "Potable tap water pipeline schemes", 
-                  purpose_bn: "পানীয় জল পাইপলাইন সংযোগ", 
-                  purpose_hi: "पेयजल पाइपलाइन योजना", 
-                  purpose_mr: "पिण्याचे पाणी पाईपलाईन योजना", 
-                  area_en: "National / All States", 
-                  area_bn: "জাতীয় / সকল রাজ্য", 
-                  area_hi: "राष्ट्रीय / सभी राज्य", 
-                  area_mr: "राष्ट्रीय / सर्व राज्ये", 
-                  icon: Waves 
+                {
+                  org_en: "Jal Jeevan Drinking Water Mission",
+                  org_bn: "জল জীবন মিশন সহায়তা",
+                  org_hi: "जल जीवन मिशन पेयजल डेस्क",
+                  org_mr: "जल जीवन मिशन पाणी पुरवठा कक्ष",
+                  number: "1800-180-3535",
+                  purpose_en: "Potable tap water pipeline schemes",
+                  purpose_bn: "পানীয় জল পাইপলাইন সংযোগ",
+                  purpose_hi: "पेयजल पाइपलाइन योजना",
+                  purpose_mr: "पिण्याचे पाणी पाईपलाईन योजना",
+                  area_en: "National / All States",
+                  area_bn: "জাতীয় / সকল রাজ্য",
+                  area_hi: "राष्ट्रीय / सभी राज्य",
+                  area_mr: "राष्ट्रीय / सर्व राज्ये",
+                  icon: Waves
                 },
               ].map((h, index) => {
                 const HelplineIcon = h.icon;
@@ -2633,7 +2617,7 @@ export default function App() {
                   <div key={index} className={`card-warm p-5 relative overflow-hidden hover:shadow-md transition-all animate-fade-in-up stagger-${index + 1}`}>
                     {/* Tricolor top accent */}
                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-tricolor-saffron via-white to-tricolor-green"></div>
-                    
+
                     <div className="flex items-center gap-3 mb-3">
                       <div className="p-2 rounded-xl bg-saffron-50 text-saffron-dark">
                         <HelplineIcon className="h-5 w-5" />
