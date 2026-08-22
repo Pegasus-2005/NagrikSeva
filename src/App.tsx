@@ -1320,7 +1320,7 @@ export default function App() {
       <section className="relative overflow-hidden bg-gradient-to-b from-saffron-50 via-cream-dark to-cream py-12 md:py-16 px-4 border-b border-warm-border">
         {/* Subtle authentic Indian civic architecture overlay */}
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-multiply pointer-events-none"
+          className="absolute inset-0 bg-cover bg-center opacity-[0.18] pointer-events-none"
           style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
         />
         

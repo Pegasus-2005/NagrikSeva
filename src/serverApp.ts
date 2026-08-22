@@ -218,52 +218,72 @@ app.post("/api/generate-document", async (req, res) => {
         let languageNote = "";
         if (language === "bn") {
           languageNote =
-            "The user selected Bengali (বাংলা). Draft COMPLAINT_DOCUMENT and RTI_DOCUMENT in formal legal English. Write CITIZEN_SUMMARY in natural, simple Bengali (বাংলা) that a village resident can easily understand.";
+            "The citizen wrote their issue in Bengali or Romanized Bengali. You MUST translate/rewrite their raw description into clear, formal English for the COMPLAINT_DOCUMENT and RTI_DOCUMENT. Write CITIZEN_SUMMARY in natural, simple Bengali (বাংলা) that a village resident can easily understand.";
         } else if (language === "hi") {
           languageNote =
-            "The user selected Hindi (हिन्दी). Draft COMPLAINT_DOCUMENT and RTI_DOCUMENT in formal legal English. Write CITIZEN_SUMMARY in simple, respectful Hindi (हिन्दी).";
+            "The citizen wrote their issue in Hindi or Romanized Hindi. You MUST translate/rewrite their raw description into clear, formal English for the COMPLAINT_DOCUMENT and RTI_DOCUMENT. Write CITIZEN_SUMMARY in simple, respectful Hindi (हिन्दी).";
         } else if (language === "mr") {
           languageNote =
-            "The user selected Marathi (मराठी). Draft COMPLAINT_DOCUMENT and RTI_DOCUMENT in formal legal English. Write CITIZEN_SUMMARY in simple, respectful Marathi (मराठी).";
+            "The citizen wrote their issue in Marathi or Romanized Marathi. You MUST translate/rewrite their raw description into clear, formal English for the COMPLAINT_DOCUMENT and RTI_DOCUMENT. Write CITIZEN_SUMMARY in simple, respectful Marathi (मराठी).";
         } else {
           languageNote =
-            "Draft all three documents in formal, legally appropriate English.";
+            "Draft all three documents in formal, legally appropriate English. Rewrite the citizen's raw description into clear, formal prose.";
         }
 
-        const prompt = `You are 'NagrikSeva', an Indian citizen empowerment and administrative drafting assistant.
-Generate legally structured, professional complaint letters and RTI applications representing the citizen.
+        const prompt = `You are 'NagrikSeva', an expert Indian legal document drafter specializing in civic grievance complaints, RTI applications, and citizen empowerment.
 
-Citizen Input Parameters:
-- State/Region: ${state}
+YOUR CRITICAL RESPONSIBILITIES:
+1. UNDERSTAND THE CITIZEN'S ISSUE: The citizen may have typed in ANY language — English, Bengali, Hindi, Marathi, or even Romanized versions (e.g. "amar area te jol ashche na" = "water is not coming in my area"). You must UNDERSTAND the meaning regardless of script or language.
+2. TRANSLATE & FORMALIZE: Rewrite their raw issue description into a formal, professional English complaint paragraph. NEVER copy-paste their raw text as-is into the formal letter. The complaint letter must read as if written by a professional legal advocate.
+3. CITE SPECIFIC LAWS & CLAUSES: You are given statutory RAG context below. You MUST cite at least 2-3 specific clauses, sections, or act references from this context in the complaint body. Format citations like: "As per [Source], [Section] ([Clause]): [quoted text]".
+4. USE ACCURATE DETAILS: Use the exact duration the citizen reported. If they said "4 din" or "4 days", write "4 days" — do NOT substitute a different range.
+
+Citizen Input:
+- State: ${state}
 - City/District: ${city || "General municipal area"}
-- Category: ${category}
-- Issue Description: "${description}"
-- Problem Duration: ${duration}
-- Previous Ref: ${previous_ref || "None registered yet"}
-- Requested Document: ${document_type}
-- Citizen Info:
+- Category: ${category.replace(/_/g, " ")}
+- Citizen's Raw Issue (may be in any language/script): "${description}"
+- Duration of Problem: ${duration}
+- Previous Reference No: ${previous_ref || "None — first formal petition"}
+- Document Type Requested: ${document_type}
+- Citizen Details:
 ${citizenSignatureDetails}
 
-Department Details:
-- Designation: ${deptInfo ? deptInfo.designation : "The Executive Engineer"}
+Department to Address:
+- Officer: ${deptInfo ? deptInfo.designation : "The Executive Engineer"}
 - Department: ${deptInfo ? deptInfo.departmentName : "Public Grievances Department"}
 - Address: ${deptInfo ? deptInfo.address : "Municipal Office HQ, " + state}
 - Helpline: ${deptInfo ? deptInfo.helpline : "1800-XXX-XXXX"}
-- SLA: ${deptInfo ? deptInfo.expectedResolutionDays + " Days" : "As per State Citizens Charter"}
+- SLA Guarantee: ${deptInfo ? deptInfo.expectedResolutionDays + " working days" : "As per Citizen Charter"}
 
-Regional Grounding Context:
+STATUTORY & LEGAL CONTEXT FROM RAG (cite these in the complaint):
 ---------
-${retrievedContext}
+${retrievedContext || "No specific statutory context found. Use general RTI Act 2005 and Citizen Charter provisions."}
 ---------
 
-Drafting Requirements:
-1. Output exactly three sections with these exact headers on their own lines:
-   # COMPLAINT_DOCUMENT
-   # RTI_DOCUMENT
-   # CITIZEN_SUMMARY
-2. ${languageNote}
-3. Include specific statutory citations from the context above.
-4. Make the language strong but respectful.`;
+LANGUAGE INSTRUCTION:
+${languageNote}
+
+OUTPUT FORMAT — produce exactly these three sections with these exact headers:
+
+# COMPLAINT_DOCUMENT
+A formal grievance letter dated ${todayDate}, addressed to the department officer above. Must include:
+- Formal subject line
+- A clear, professionally rewritten paragraph explaining the citizen's issue (translated from their raw input)
+- Duration and impact on residents
+- At least 2-3 statutory citations from the RAG context above
+- A prayer/relief section
+- Citizen's signature block
+
+# RTI_DOCUMENT  
+A formal RTI application under Section 6(1) of the RTI Act 2005, seeking:
+- Maintenance logbooks and work orders for the past 6 months
+- Action Taken Report on this issue
+- Name and contact of the accountable officer
+- Budget allocation details
+
+# CITIZEN_SUMMARY
+Simple step-by-step filing instructions for the citizen in their selected language. Include how to print, where to submit, what fee stamp to attach, and the helpline number to call if unresolved.`;
 
         const content = await ai.models.generateContent({
           model: "gemini-2.0-flash",
@@ -285,13 +305,12 @@ Drafting Requirements:
     // (runs when no API key or Gemini call failed)
     // ---------------------------------------------------------------------------
     if (!responseText) {
-      const topRule = matchedChunks[0] || {
-        source: "Citizen Charter and Right to Public Services Standards",
-        section: "Public Service Standard",
-        clause: "Clause 3.1 / RTS Act",
-        content:
-          "Time-bound redressal of civic grievance within statutory timeframe.",
-      };
+      // Collect ALL matched RAG citations (not just one)
+      const ragCitations = matchedChunks.length > 0
+        ? matchedChunks.slice(0, 4).map((chunk, i) =>
+            `${i + 1}. As per ${chunk.source}, ${chunk.section} (${chunk.clause}):\n   "${chunk.content}"`
+          ).join("\n\n")
+        : `1. As per the Citizen Charter and Right to Public Services Standards, Public Service Standard (Clause 3.1):\n   "Time-bound redressal of civic grievance within statutory timeframe."`;
 
       const deptDesignation = deptInfo
         ? deptInfo.designation
@@ -307,7 +326,7 @@ Drafting Requirements:
 
       let summaryLangBlock = "";
       if (language === "bn") {
-        summaryLangBlock = `১. আবেদনপত্রটির ২টি কপি প্রিন্ট করে সই করুন।\n২. ১০ টাকার কোর্ট ফি স্ট্যাম্প বা পোস্টাল অর্ডার যুক্ত করুন (বিপিএল হলে সম্পূর্ণ ছাড়)।\n৩. স্থানীয় ${deptName} দপ্তরে জমা দিয়ে রিসিভিং কপিতে সিলমোহর নিন।\n৪. সমাধান না হলে বিভাগীয় হেল্পলাইন ${helpline}-এ যোগাযোগ করুন।`;
+        summaryLangBlock = `১. আবেদনপত্রটির ২টি কপি প্রিন্ট করে সই করুন।\n২. ১০ টাকার কোর্ট ফি স্ট্যাম্প বা পোস্টাল অর্ডার যুক্ত করুন (বিপিএল হলে সম্পূর্ণ ছাড়)।\n৩. স্থানীয় ${deptName} দপ্তরে জমা দিয়ে রিসিভিং কপিতে সিলমোহর নিন।\n৪. ${slaDays} কর্মদিবসের মধ্যে সমাধান না হলে বিভাগীয় হেল্পলাইন ${helpline}-এ যোগাযোগ করুন।`;
       } else if (language === "hi") {
         summaryLangBlock = `1. आवेदन पत्र की 2 प्रतियां प्रिंट करें और हस्ताक्षर करें।\n2. ₹10 का कोर्ट फीस स्टैंप या पोस्टल ऑर्डर लगाएं (बीपीएल धारकों को पूर्ण छूट)।\n3. स्थानीय ${deptName} कार्यालय में जमा करके पावती रसीद लें।\n4. ${slaDays} दिनों में समाधान न होने पर हेल्पलाइन ${helpline} पर संपर्क करें।`;
       } else if (language === "mr") {
@@ -323,25 +342,30 @@ ${deptDesignation}
 ${deptName}
 ${deptAddress}
 
-SUBJECT: FORMAL GRIEVANCE REGARDING ${category.toUpperCase().replace(/_/g, " ")} AT ${(city || state).toUpperCase()}
+SUBJECT: FORMAL GRIEVANCE REGARDING ${category.toUpperCase().replace(/_/g, " ")} AT ${(city || state).toUpperCase()}, ${state.toUpperCase()}
 
 Respected Sir/Madam,
 
-I am writing to formally lodge an urgent civic complaint regarding the ongoing issue in our locality as detailed below:
+I, the undersigned, a permanent resident of ${citizen_address || city || state}, hereby wish to bring to your urgent notice the following civic grievance that has been causing severe hardship to the residents of our locality.
 
-1. Location of Grievance: ${city}, ${state}
-2. Nature of Problem: ${description}
-3. Duration of Neglect/Delay: ${duration}
-4. Prior Complaint Reference: ${previous_ref || "First formal written petition"}
+DETAILS OF GRIEVANCE:
+The ${category.replace(/_/g, " ")} service in our ward/area has been severely disrupted. As described by the affected citizen: "${description}". This disruption has persisted for a period of ${duration}, causing significant inconvenience and distress to all residents in the vicinity.
 
 STATUTORY AND CITIZEN CHARTER GROUNDS:
-As per the ${topRule.source}, ${topRule.section} (${topRule.clause}):
-"${topRule.content}"
+The following statutory provisions and citizen charter clauses are directly applicable to this grievance:
 
-Under the Citizen Charter standards, the prescribed timeline for resolving this nature of municipal issue is ${slaDays} working days. The continued neglect is causing significant distress to residents of our locality.
+${ragCitations}
+
+The above provisions clearly mandate that the concerned department must address and resolve such issues within ${slaDays} working days. The continued failure to act constitutes a violation of the Citizen Charter commitments and the statutory Right to Public Services standards.
 
 PRAYER / RELIEF SOUGHT:
-I respectfully request your office to immediately dispatch an inspection team, carry out necessary remedial works, and restore the public service without further delay.
+In view of the above, I respectfully and urgently request your good office to:
+(a) Immediately depute an inspection team to assess the ground situation;
+(b) Carry out all necessary remedial works to restore the ${category.replace(/_/g, " ")} service without further delay;
+(c) Provide a written acknowledgment of this complaint with a reference number and expected timeline for resolution;
+(d) Take disciplinary action against any officer found negligent in discharging their duties.
+
+I trust that your office will take prompt corrective action in this matter.
 
 Yours faithfully,
 
@@ -354,23 +378,29 @@ The Public Information Officer (PIO)
 Office of ${deptName}
 ${deptAddress}
 
+Subject: Application under the Right to Information Act, 2005
+
 1. Full Name of the Applicant: ${citizen_name || "[Your Full Name]"}
 2. Full Postal Address: ${citizen_address || "[Full Postal Address with Ward/PIN]"}
 3. Contact Phone Number: ${citizen_phone || "[Mobile Number]"}
 
 4. Particulars of Information Required:
-   a. Certified copies of daily logbooks and work orders for ${category.replace(/_/g, " ")} maintenance in ${city} for the last 6 months.
-   b. Status and Action Taken Report (ATR) on citizen complaints regarding: "${description}".
-   c. Name, designation, and contact details of the officer accountable for resolving this issue within ${slaDays} days as per the Citizen Charter.
-   d. Copies of budget allocation and contractor expenditure vouchers for recent repairs in this ward.
+   a. Certified copies of daily maintenance logbooks and work orders pertaining to ${category.replace(/_/g, " ")} services in ${city || "our ward"} for the last 6 months.
+   b. Status report and official Action Taken Report (ATR) on all citizen complaints received regarding: "${description}".
+   c. Name, designation, and official contact details of the officer directly accountable for resolving ${category.replace(/_/g, " ")} issues within the statutory ${slaDays}-day SLA period as per the Citizen Charter.
+   d. Certified copies of budget allocation statements, contractor payment vouchers, and tender documents for all ${category.replace(/_/g, " ")} repair/maintenance works undertaken in the last 12 months in this ward.
+   e. Details of any pending complaints or unresolved grievances related to ${category.replace(/_/g, " ")} in our area, along with reasons for non-resolution.
 
 5. Application Fee:
-   ${citizen_bpl ? `* Exempt from fee under Section 7(5) RTI Act 2005 (BPL Card No: ${citizen_bpl}).` : `* Application fee of ₹10/- affixed via Court Fee Stamp / Indian Postal Order.`}
+   ${citizen_bpl ? `* Exempt from application fee under Section 7(5) of RTI Act 2005 as a Below Poverty Line (BPL) card holder (Card No: ${citizen_bpl}). Copy of BPL card enclosed herewith.` : `* Application fee of ₹10/- (Rupees Ten Only) affixed herewith via Court Fee Stamp / Indian Postal Order payable to the PIO.`}
+
+6. Preferred Mode of Information: Hard copy / Certified photocopy at the above postal address.
 
 Place: ${city}, ${state}
 Date: ${todayDate}
 
-Signature of Applicant: _____________________`;
+Signature of Applicant: _____________________
+Name: ${citizen_name || "[Your Full Name]"}`;
 
       responseText = `# COMPLAINT_DOCUMENT\n${complaintDoc}\n\n# RTI_DOCUMENT\n${rtiDoc}\n\n# CITIZEN_SUMMARY\n${summaryLangBlock}`;
     }
